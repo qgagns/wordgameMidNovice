@@ -265,7 +265,7 @@ choose (chose, chosen): [동] 선택하다, 고르다
 freeze (froze, frozen): [동] 얼다, 얼리다
 speak (spoke, spoken): [동] 말하다
 steal (stole, stolen): [동] 훔치다
-get (got, gotten/got): [동] 얻다; ~해지다
+get (got, got): [동] 얻다; ~해지다
 forget (forgot, forgotten): [동] 잊다
 begin (began, begun): [동] 시작하다
 drink (drank, drunk): [동] 마시다
@@ -286,7 +286,7 @@ withdraw (withdrew, withdrawn): [동] 철회하다
 swear (swore, sworn): [동] 맹세하다
 tear (tore, torn): [동] 찢다
 wear (wore, worn): [동] 입다
-show (showed, showed/shown): [동] 보여주다
+show (showed, shown): [동] 보여주다
 be (was/were, been): [동] 있다/이다
 beat (beat, beaten): [동] 때리다
 become (became, become): [동] 되다

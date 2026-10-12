@@ -378,19 +378,7 @@ fish (fish): [명] 물고기, 생선
 species (species): [명] 종(생물 분류 단위)
 series (series): [명] 연속, 시리즈
 aircraft (aircraft): [명] 항공기
-leaf (leaves): [명] 나뭇잎
-half (halves): [명] 절반, 반
-knife (knives): [명] 칼
-wife (wives): [명] 아내
-life (lives): [명] 삶, 목숨
-thief (thieves): [명] 도둑
-wolf (wolves): [명] 늑대
-shelf (shelves): [명] 선반
-calf (calves): [명] 송아지, 종아리
-loaf (loaves): [명] (빵 한) 덩어리
-datum (data): [명] 자료, 데이터
 medium (media): [명] 매체, 대중매체
-bacterium (bacteria): [명] 박테리아, 세균
 curriculum (curricula): [명] 교육과정, 커리큘럼
 criterion (criteria): [명] 기준, 표준
 phenomenon (phenomena): [명] 현상
@@ -414,12 +402,11 @@ badly (worse, worst): [부] 심하게, 나쁘게
 many (more, most): [형] 많은 (셀 수 있는 명사 수식)
 much (more, most): [형/부] 많은, 많이 (셀 수 없는 명사 수식)
 little (less, least): [형/부] 적은, 적게 (양/정도)
-far (farther, farthest): [형/부] 더 먼, 가장 먼 (물리적 거리)
-far (further, furthest): [형/부] 더 나아간, 한층 더 (정도·깊이)
-late (later, latest): [형/부] 더 늦은, 가장 최근의 (시간 기준)
-late (latter, last): [형] (둘 중) 후자의, 마지막의 (순서 기준)
-old (older, oldest): [형] 더 나이 든, 가장 오래된 (나이·연식)
-old (elder, eldest): [형] 손위의, 가장 맏이의 (가족 서열)
-
+far (거리) (farther, farthest): [형/부] 먼, 더 먼, 가장 먼
+far (정도) (further, furthest): [형/부] 나아간, 더 나아간, 가장 깊은
+late (시간) (later, latest): [형/부] 늦은, 더 늦은, 가장 최근의
+late (순서) (latter, last): [형] (둘 중) 나중의, 후자의, 마지막의
+old (나이) (older, oldest): [형] 나이 든, 더 나이 든, 가장 나이 든
+old (서열) (elder, eldest): [형] 나이 든, 손위의, 가장 맏이의
 
 `;

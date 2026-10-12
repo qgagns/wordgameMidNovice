@@ -7797,7 +7797,7 @@ function handleMidBossVictory() {
                 }
                 row.innerHTML = `
                     <div class="word-text-group">
-                        <span class="word-main-eng">${item.eng}</span>
+                        <span class="word-main-eng">${item.displayEng || item.eng}</span>
                         <span class="word-sub-kor">${item.kor}</span>
                     </div>
                     <div style="display:flex; align-items:center; gap:6px;">
@@ -8828,7 +8828,7 @@ function handleMidBossVictory() {
                 row.style.borderLeftColor = (type === 'fav') ? '#ec4899' : '#ea580c';
                 row.innerHTML = `
                     <div class="word-text-group">
-                        <span class="word-main-eng">${w.eng}</span>
+                        <span class="word-main-eng">${w.displayEng || w.eng}</span>
                         <span class="word-sub-kor">${w.kor}</span>
                     </div>
                     <button data-fav-word="${w.eng.replace(/"/g, '&quot;')}" style="background:none; border:none; font-size:18px; cursor:pointer;" onclick="toggleWordFavorite(this.dataset.favWord, event); updateShrineWordlistCount();">

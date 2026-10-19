@@ -1,6 +1,6 @@
 {
-  "name": "단어 정령의 위기: EXAM의 시련",
-  "short_name": "단어정령",
+  "name": "Word Spirits for MNovice",
+  "short_name": "WS forMN",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#1c0e07",

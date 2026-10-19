@@ -1,7 +1,9 @@
 {
   "name": "Word Spirits for MNovice",
   "short_name": "WS forMN",
+  "id": "/forMN/",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
   "background_color": "#1c0e07",
   "theme_color": "#1c0e07",

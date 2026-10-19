@@ -19,10 +19,10 @@ const GAME_CONFIG = {
 
     // 👑 [마왕전 체력 & 시간 & 플레이어 목숨]
     bossHp1: 10,               // 1회차 마왕 체력 (기본: 10)
-    bossTime1: 5.0,            // 1회차 마왕 시간 (기본: 5.0초)
+    bossTime1: 4.0,            // 1회차 마왕 시간 (기본: 5.0초)
 
     bossHpRepeat: 12,          // 2회차 마왕 체력 (기본: 12)
-    bossTimeRepeat: 4.0,       // 2회차 마왕 시간 (기본: 4.0초)
+    bossTimeRepeat: 3.0,       // 2회차 마왕 시간 (기본: 4.0초)
     bossPlayerHpRepeat: 3,     // 👈 2회차 마왕전 플레이어 하트 수 (기본: 3개)
 
     // 🔥 [시험 직전 파이널] 하드코어 마왕전 설정
@@ -30,9 +30,9 @@ const GAME_CONFIG = {
         enabled: true,                       // 켜기(true) / 끄기(false)
         title: "책 선생의 하드코어 점검",            // 시험 명칭
         targetMaps: "all",                   // "all" 또는 ["ch1", "ch2"]
-        hp: 15,                              // 출제 문제 수 (마왕 체력)
-        playerHp: 3,                         // 👈 하드코어 플레이어 하트 수 (기본: 3개, 1개로 하면 원코인 데스!)
-        timeLimit: 3                       // 문제당 제한 시간 (초)
+        hp: 10,                              // 출제 문제 수 (마왕 체력)
+        playerHp: 1,                         // 👈 하드코어 플레이어 하트 수 (기본: 3개, 1개로 하면 원코인 데스!)
+        timeLimit: 5                       // 문제당 제한 시간 (초)
     }
 };
 
@@ -52,8 +52,8 @@ introduce:[동] 소개하다; [동] 도입하다
 continue:[동] 계속하다
 invent:[동] 발명하다
 imagine:[동] 상상하다
-happen:[동] 일어나다
-depend:[동] 의존하다, ~에 달려 있다
+happen:[동] 일어나다, 발생하다
+depend on:[동] ~에 의존하다, ~에 달려 있다
 apply:[동] 적용하다; 신청하다, 지원하다; 도포하다, 바르다
 allow:[동] 허락하다
 prepare:[동] 준비하다

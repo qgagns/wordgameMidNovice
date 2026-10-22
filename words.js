@@ -8,6 +8,7 @@ const GAME_CONFIG = {
     // 🎛️ [교사용 마스터 계정] 선생님만 아는 관리자 로그인 아이디/비밀번호
     adminId: "qlagn",          // 관리자 로그인 아이디 (기본: admin)
     adminPw: "0112",           // 관리자 비밀번호 (기본: 0000)
+    adminName: "책선생",        // 👈 선생님 성함 지정!
 
     // ⚔️ [수호령전 체력 & 시간 & 플레이어 목숨]
     guardianHp1: 5,            // 1회차 수호령 체력 (기본: 5)
@@ -24,6 +25,14 @@ const GAME_CONFIG = {
     bossHpRepeat: 12,          // 2회차 마왕 체력 (기본: 12)
     bossTimeRepeat: 3.0,       // 2회차 마왕 시간 (기본: 4.0초)
     bossPlayerHpRepeat: 3,     // 👈 2회차 마왕전 플레이어 하트 수 (기본: 3개)
+
+    // 🚨 [안개 구출전 일일 쿼터 설정] (일반 단어 계약량에 따라 하루 의무 구출량 배정)
+    rescueQuota: [
+        { reqWords: 400, quota: 20 }, // 일반 단어 400마리 이상: 하루 20마리
+        { reqWords: 240, quota: 15 }, // 일반 단어 240마리 이상: 하루 15마리
+        { reqWords: 120, quota: 10 }, // 일반 단어 120마리 이상: 하루 10마리
+        { reqWords: 0,   quota: 5  }  // 기본(0마리 이상): 하루 5마리
+    ],
 
     // 🔥 [시험 직전 파이널] 하드코어 마왕전 설정
     hardcoreMode: {

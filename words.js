@@ -2,14 +2,14 @@
 // ⚙️ [학교 설정] 학교나 시험이 바뀔 때 여기만 수정하세요!
 // ========================================================
 const GAME_CONFIG = {
-    schoolTag: "덕정고1",      // 부제 옆에 붙을 학교/버전명 (예: The Trial of EXAM · 덕정고2 ver)
-    dbKey: "2026_2_2_dj1",      // 학교별 독립 DB 분리 키 (연도_학기_차_학교학년)
+    schoolTag: "덕정고2",      // 부제 옆에 붙을 학교/버전명 (예: The Trial of EXAM · 덕정고2 ver)
+    dbKey: "2026_2_2_dj2",      // 학교별 독립 DB 분리 키 (연도_학기_차_학교학년)
 
     // 🎛️ [교사용 마스터 계정] 선생님만 아는 관리자 로그인 아이디/비밀번호
     adminId: "qlagn",          // 관리자 로그인 아이디 (기본: admin)
     adminPw: "0112",           // 관리자 비밀번호 (기본: 0000)
     adminName: "책선생",        // 👈 선생님 성함 지정!
-
+    
     // ⚔️ [수호령전 체력 & 시간 & 플레이어 목숨]
     guardianHp1: 5,            // 1회차 수호령 체력 (기본: 5)
     guardianTime1: 7.0,        // 1회차 수호령 시간 (기본: 7.0초)
@@ -54,1097 +54,1059 @@ const GAME_CONFIG = {
 
 const WORLD_MAPS_TEXT = `
 
-[spell_1: 2차 수행 단어]
-#2학기 2차 수행 단어. 철자까지 확인하는 까탈스러운 정령들이다!
-implicit	:	[형] 암시적인
-indigenous	:	[형] 토착의
-indispensable	:	[형] 없어서는 안 되는
-inherent	:	[형] 내재된
-innate	:	[형] 선천적인
-intrinsic	:	[형] 본질적인
-jeopardize	:	[동] 위태롭게 하다
-journal	:	[명] 학술지
-juvenile	:	[형] 청소년의
-kinship	:	[명] 유대
-knowledgeable	:	[형] 지식이 많은
-lament	:	[동] 한탄하다
-landscape	:	[명] 경관
-latent	:	[형] 잠재된
-launch	:	[동] 시작하다
-legacy	:	[명] 유산
-legitimate	:	[형] 정당한
-liable	:	[형] 책임이 있는
-literacy	:	[명] 문해력
-magnitude	:	[명] 규모
-mandatory	:	[형] 의무적인
-manifest	:	[동] 나타나다
-manipulate	:	[동] 조작하다
-massive	:	[형] 대규모의
-mechanism	:	[명] 메커니즘
-metaphor	:	[명] 은유
-migrate	:	[동] 이동하다
-modest	:	[형] 겸손한
-motivate	:	[동] 동기를 부여하다
-narrative	:	[명] 서사
-neglect	:	[동] 소홀히 하다
-neutral	:	[형] 중립적인
-nevertheless	:	[부] 그럼에도 불구하고
-notion	:	[명] 관념
-notorious	:	[형] 악명 높은
-obligation	:	[명] 의무
-obscure	:	[형] 모호한 (o_)
-obstacle	:	[명] 장애물
-omit	:	[동] 생략하다
-opponent	:	[명] 상대
-optimistic	:	[형] 낙관적인
-outbreak	:	[명] 발생
-overlook	:	[동] 간과하다
-participate	:	[동] 참여하다
-perception	:	[명] 인식
-permanent	:	[형] 영구적인
-perspective	:	[명] 관점
-persuade	:	[동] 설득하다
-phenomenon	:	[명] 현상
-pioneer	:	[명] 선구자
-potential	:	[명] 잠재력
-precaution	:	[명] 예방 조치
-precise	:	[형] 정확한
-prejudice	:	[명] 편견
-privilege	:	[명] 특권
-procedure	:	[명] 절차
-prohibit	:	[동] 금지하다
-prominent	:	[형] 저명한
-provoke	:	[동] 유발하다
-qualitative	:	[형] 질적인
-quantify	:	[동] 수치화하다
-quota	:	[명] 할당량
-radical	:	[형] 급진적인
-rational	:	[형] 합리적인
-recipient	:	[명] 수령자
-refine	:	[동] 다듬다
-reform	:	[명] 개혁
-reinforce	:	[동] 강화하다
-relevant	:	[형] 관련된
-reliable	:	[형] 믿을 만한
-reluctant	:	[형] 꺼리는
-remarkable	:	[형] 놀라운
-represent	:	[동] 대표하다
-restrict	:	[동] 제한하다
-reveal	:	[동] 드러내다
-scarce	:	[형] 부족한
-scheme	:	[명] 계획
-scholar	:	[명] 학자
-secondary	:	[형] 부차적인
-significant	:	[형] 중요한
-simultaneous	:	[형] 동시의
-sophisticated	:	[형] 정교한
-specific	:	[형] 구체적인
-speculate	:	[동] 추측하다
-subsequent	:	[형] 그 후의
-substantial	:	[형] 상당한
-subtle	:	[형] 미묘한
-sufficient	:	[형] 충분한
-supervise	:	[동] 감독하다
-technical	:	[형] 기술적인
-temporary	:	[형] 일시적인
-tendency	:	[명] 경향
-tension	:	[명] 긴장
-theoretical	:	[형] 이론상의
-thorough	:	[형] 철저한
-thrive	:	[동] 번성하다
-tolerate	:	[동] 참다
-transition	:	[명] 전환
-typical	:	[형] 전형적인
-undermine	:	[동] 약화시키다
-unique	:	[형] 독특한
-universal	:	[형] 보편적인
-utilize	:	[동] 활용하다
-vague	:	[형] 모호한 (v_)
-venture	:	[명] 모험적인 시도
-
-
-[CE2_L3: 3과 단어]
-# 교과서 3과에 나오는 단어 정령들이 노니는 곳
-resilience	:	[명] 회복력, 탄력
-overcome	:	[동] 극복하다
-wellness	:	[명] 건강(함)
-deal with ~	:	[동] ~을 처리하다[다루다]
-cultivate	:	[동] (지식∙자질 등을) 기르다, 함양하다
-inner	:	[형] 내면의
-strength	:	[명] 강인함, 정신력
-free from ~	:	[형] ~을 면한, ~의 염려가 없는
-adversity	:	[명] 역경, 고난
-take the form of ~	:	[동] ~의 모습을 취하다
-failure	:	[명] 실패
-issue	:	[명] 문제; [동] 발행하다
-ability	:	[명] 능력
-known as ~	:	[형] ~라고 알려져 있는
-spring back	:	[동] 되튀다
-bouncy	:	[형] 잘 튀는, 탄력 있는
-resilient	:	[형] 회복력 있는, 탄력 있는
-bounce back	:	[동] (병∙곤경 등에서) 다시 회복되다
-countless	:	[형] 셀 수 없이 많은
-survive	:	[동] (위기 등을) 견뎌내다, 이겨내다; [동] 생존하다, 살아남다
-a stepping stone to ~	:	[명] ~을 위한 발판
-growth	:	[명] 성장
-fairy tale	:	[명] 동화
-poverty	:	[명] 가난, 빈곤
-loss	:	[명] 죽음, 상실
-disrespect	:	[동] ~에게 무례하게 대하다
-source	:	[명] 원천, 근원
-blessing	:	[명] 축복
-inspire	:	[동] ~에게 영감을 주다
-duckling	:	[명] 새끼 오리
-athlete	:	[명] (운동)선수
-opportunity	:	[명] 기회
-medical condition	:	[명] 질병
-result in ~	:	[동] 야기하다, 초래하다
-surgery	:	[명] 수술
-compete against ~	:	[동] ~와 경쟁하다
-disability	:	[명] 장애, 불능
-national	:	[형] 국가의, 전국적인
-participate in ~	:	[동] ~에 참가하다, 참여하다
-public speaking	:	[명] 공개연설
-condition	:	[명] 상태; [명] 조건; [명] 질환
-potential	:	[명] 잠재력; [형] 잠재적인
-exceptional	:	[형] 예외적인, 아주 드문, 특출난
-crisis	:	[명] 위기
-otherwise	:	[부] (만약) 그렇지 않으면
-lasting	:	[형] 지속적인
-muscle	:	[명] 근육
-build ~ up	:	[동] 더 높이다, 다지다
-thought	:	[명] 생각
-allow	:	[동] 허락하다, 허용하다
-painful	:	[형] (마음이) 아픈, 고통스러운
-basic	:	[형] 기본[근본]적인
-strategy	:	[명] 전략
-accept	:	[동] 받아들이다, 수용하다
-respect	:	[동] 존중하다; [명] 존중
-passive	:	[형] 수동적인, 소극적인
+[E2_L3_1: 3과 단어 1]
+# 3과의 단어 정령들. 잘 보살펴주자.
+varied	:	[형] 다양한
+it appears[seems] that ~	:	[숙] ~인 것으로 보인다
+exist	:	[동] 있다, 존재하다
+solely	:	[부] 단독으로, 오로지
 suffering	:	[명] 고통
-single ~ out	:	[동] 골라내다
-face	:	[동] 직면하다[닥쳐오다]; [명] 얼굴, 면
-focus on ~	:	[동] ~에 집중하다, 초점을 맞추다
-embrace	:	[동] 수용하다, 포용하다
-unexpected	:	[형] 예기치 않은, 뜻밖의
-obstacle	:	[명] 장애물
-think of ~	:	[동] 생각하다
-that is (to say)	:	[부] 즉, 말하자면
-personal	:	[형] 개인의, 개인적인
-look after ~	:	[동] 돌보다, 보살피다
-moment	:	[명] 순간
-regret	:	[동] 후회하다; [명] 후회
-meditate	:	[동] 명상하다
-work	:	[동] 작동되다; [동] 효과가 있다
-take a deep breath	:	[동] 깊이 숨 쉬다
-observe	:	[동] 관찰하다; [동] 준수하다
-judge	:	[동] 판단하다, 평가하다; [명] 판사, 심판
-proceed with ~	:	[동] ~을 계속 진행하다
-based on ~	:	[전] ~에 근거하여, ~를 기반으로
-go forward with ~	:	[동] ~을 진행시키다
-connect	:	[동] 연결하다
-trust	:	[동] (사람을) 신뢰하다, 믿다; [명] 믿음, 신뢰
-counselor	:	[명] 상담사
-clarity	:	[명] 명료함, 명확함
-respond to ~	:	[동] ~에 대응하다, 응답하다
-tend toR	:	[동] ~하는 경향이 있다
-support	:	[명] 격려, 도움; [동] 도와주다, 지지하다
-remove	:	[동] 없애다, 제거하다
-urge	:	[동] 권고하다, 촉구하다; [명] 충동
-particularly	:	[부] 특히
-in the middle of ~	:	[전] ~의 한가운데에
-uncertainty	:	[명] 불확실성
-tough	:	[형] 힘든, 거친
-endure	:	[동] 참다, 견디다
-minor	:	[형] 작은, 사소한
-gradually	:	[부] 서서히, 점진적으로
-fulfilled	:	[형] 만족감[성취감]을 느끼는
-a key to ~	:	[명] ~의 열쇠[단서]
-
-
-[mg_h1_26.10_1: 26.10모 1]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-think of ~ as ...	:	[동] ~을 ...로 생각하다, 여기다
-global	:	[형] 세계적인, 전지구적인
-global citizen	:	[명] 세계 시민
-necessary	:	[형] 필요한
-skeptical	:	[형] 회의적인
-citizenship	:	[명] 시민권, 시민 의식
-nation-state	:	[명] 국민 국가
-after all	:	[부] 어쨌든, 따지고 보면
-exist	:	[동] 존재하다
-rise	:	[동] 상승하다; [명] 상승, 도래, 부상
-identity	:	[명] 정체성
-religion	:	[명] 종교
-given ~	:	[전] ~을 고려하면
-connection	:	[명] 연결, 관계
-challenge	:	[명] 도전, 난제, 어려움; [동] 도전하다; [동] 이의를 제기하다
-layer	:	[동] 겹겹이 쌓다, 더하다
-replace	:	[동] 대신하다, 대체하다
-precisely	:	[부] 정확히
-obligation	:	[명] 의무
-community	:	[명] 공동체, 지역 사회
-people	:	[명] 민족, 사람들
-citizen	:	[명] 시민
-century	:	[명] 세기
-instead	:	[부] 대신에
-such as	:	[전] 예를 들어, ~와 같은
-unsatisfied	:	[형] 불만족한
-professional	:	[명] 전문직 종사자
-theme	:	[명] 주제
-belief	:	[명] 믿음, 신념
-mysterious	:	[형] 불가사의한, 알 수 없는
-miraculously	:	[부] 기적적으로
-stumble into ~	:	[동] 우연히 ~하게 되다
-typically	:	[부] 보통, 일반적으로
-meaningfully	:	[부] 의미 있게
-alter	:	[동] 바꾸다, 변경하다
-current	:	[형] 현재의
-head to ~	:	[동] ~로 향하다
-job board	:	[명] 구인 게시판
-similar (to ~)	:	[형] (~와) 비슷한
-universe	:	[명] 우주
-sprinkle	:	[동] 뿌리다
-hit the refresh button	:	[동] 새로고침 버튼을 누르다, 새로 시작하다, 분위기를 바꾸다
-set oneself up	:	[동] 스스로를 (~한 상황에) 처하게 하다
-disenchanted	:	[형] 환멸을 느낀
-rearrange	:	[동] 재배열하다
-switch	:	[동] 바꾸다, 전환하다; [명] 스위치, 전환
-approach	:	[명] 접근법
-unsatisfactory	:	[형] 만족스럽지 못한
-competent	:	[형] 유능한, 경쟁력 있는
-pursue	:	[동] 추구하다
-stability	:	[명] 안정(성)
-prize	:	[명] 보상, 상(품)
-career	:	[명] 직업, 경력
-situation	:	[명] 상황
-role	:	[명] 역할, 직책
-department	:	[명] 부서
-effort	:	[명] 분투, 노력
-sociologist	:	[명] 사회학자
-argue	:	[동] 주장하다; [동] 말싸움하다
-
-[mg_h1_26.10_2: 26.10모 2]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-perception	:	[명] 인식, 지각
-usage	:	[명] 사용, 사용법
-property	:	[명] 속성, 특성
-nature	:	[명] 자연; [명] 본성, 성질
-tick away	:	[동] (시계가) 똑딱거리며 흘러가다
-psychological	:	[형] 심리적인
-phenomenon / phenomena	:	[명] 현상
-individual	:	[명] 개(개)인; [형] 개별적인, 개개의
-perceive	:	[동] 인식하다, 지각하다
-to a large degree	:	[부] 상당한 정도까지, 크게
-tradition	:	[명] 전통
-norm	:	[명] 규범
-demonstrate	:	[동] 보여 주다, 시연하다, 입증하다
-fundamental	:	[형] 기본적인, 근본적인
-unit	:	[명] 단위
-invention	:	[명] 발명(품)
-vary	:	[동] 다르다, 다양하다
-structure	:	[명] 구조; [명] 구조물, 건물; [동] 구성하다, 조직하다
-routine	:	[형] 일상적인, 평범한
-retirement	:	[명] 은퇴
-dictate	:	[동] 좌우하다, 결정하다
-essential	:	[형] 핵심적인, 본질적인
-characteristic	:	[명] 특성, 특징
-creation	:	[명] 창조물, 산물
-internalize	:	[동] 내면화하다
-come toR	:	[동] ~하게 되다
-tick	:	[동] 똑딱거리다
-shape	:	[동] 형성하다, 만들다; [명] 형태, 형상
-influence	:	[명] 영향력; [동] 영향을 미치다
-rhythm	:	[명] 리듬, 박자
-pattern	:	[명] 패턴, 양식
-nine-to-five	:	[형] 9시부터 5시까지 근무하는
-illegal	:	[형] 불법의
-corporate	:	[형] 기업의
-come to light	:	[동] 드러나다, 밝혀지다
-misconduct	:	[명] 위법 행위, 비행
-expose	:	[동] 폭로하다, 드러내다
-informant	:	[명] 제보자, 정보원
-risk	:	[명] 위험; [동] (위험을 무릅쓰고) 걸다
-put an end to	:	[동] ~을 끝내다
-hence	:	[부] 그러므로, 따라서
-whistleblower	:	[명] 내부 고발자
-protection	:	[명] 보호
-come into focus	:	[동] 주목받다, 초점이 맞춰지다
-violation	:	[명] 위반
-undetected	:	[형] 발각되지 않은
-unpunished	:	[형] 처벌받지 않은
-for fear of ~	:	[전] ~을 두려워하여
-reprisal	:	[명] 보복
-consequence	:	[명] 결과, 영향
-third-party	:	[명] 제삼자
-the rule of law	:	[명] 법치(주의)
-assist	:	[동] 돕다
-unlawful	:	[형] 불법적인
-criminal	:	[형] 범죄의; [명] 범죄자
-well-balanced	:	[형] 균형 잡힌
-hesitation	:	[명] 주저, 망설임
-corruption	:	[명] 부패
-public good	:	[명] 공익, 공공의 선
-law and order	:	[명] 법과 질서
-
-[mg_h1_26.10_3: 26.10모 3]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-harm	:	[명] 해, 해로움; [동] ~에 해를 끼치다
-rule of law	:	[명] 법치주의, 법의 지배
-affect	:	[동] 영향을 미치다
-reduce	:	[동] 줄이다, 감소시키다
-behavior / behaviour	:	[명] 행동, 행위
-positive	:	[형] 긍정적인
-disconnected	:	[형] 단절된, 동떨어진
-reality	:	[명] 현실
-achieve	:	[동] 성취하다, 달성하다
-fall in love with ~	:	[동] ~에 빠지다, 반하다
-push out of mind	:	[동] ~을 생각하지 않으려 하다
-day-to-day	:	[명] 일상
-suggest	:	[동] 제안하다; [동] 시사하다, 암시하다
-fantasy	:	[명] 환상, 공상
-put effort into ~	:	[동] ~에 노력을 기울이다
-premature	:	[형] 시기상조의, 너무 이른
-accomplishment	:	[명] 성취, 업적
-romanticize	:	[동] 미화하다, 낭만적으로 생각하다
-gloss over	:	[동] ~을 얼버무리다, 대충 넘어가다
-intricacy	:	[명] 복잡함, 복잡한 사항
-integrate	:	[동] 통합하다, 포함시키다
-complex	:	[형] 복잡한; [명] 복합단지
-sum up	:	[동] 요약하다; [동] 다 더하다, 총합하다
-fantasize	:	[동] 공상하다, 상상하다
-seduce	:	[동] 유혹하다, 꾀다
-mentally	:	[부] 정신적으로
-reflect	:	[동] (on) 숙고하다; [동] 반사하다; [동] 반영하다
-necessity	:	[명] 필요
-induce	:	[동] 유발하다, 유도하다, 일으키다
-ambitious	:	[형] 야심 찬
-barrier	:	[명] 장벽, 장애물
-happen	:	[동] 일어나다, 발생하다
-research	:	[명] 연구; [동] 연구하다
-lead to ~	:	[동] ~로 이어지다, ~을 초래하다
-provide	:	[동] 제공하다
-false	:	[형] 거짓의, 잘못된
-sense of accomplishment	:	[명] 성취감
-recipe for ~	:	[명] ~의 원인이 되는 것, ~의 지름길
-immortal	:	[형] 불멸의, 죽지 않는
-jellyfish	:	[명] 해파리
-exhibit	:	[동] 보이다, 나타내다, 전시하다
-obvious	:	[형] 명백한, 분명한
-aging	:	[명] 노화
-biologically	:	[부] 생물학적으로
-die of ~	:	[동] ~으로 죽다
-likelihood	:	[명] 가능성
-species / species	:	[명] (생물학적) 종
-gerontologist	:	[명] 노인학자
-clue	:	[명] 단서
-defeat	:	[동] 물리치다, 이기다, 패배시키다
-regenerate	:	[동] 재생하다
-organism	:	[명] 유기체, 생물
-fascinating	:	[형] 매력적인, 흥미로운
-lack	:	[명] 결여, 부족; [동] ~가 결여되어 있다, 부족하다
-apparent	:	[형] 명백한, 겉으로 보이는
-relevant	:	[형] 관련 있는, 적절한
-finding	:	[명] (연구) 결과, 발견
-universal	:	[형] 보편적인
-
-[mg_h1_26.10_4: 26.10모 4]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-relate to ~	:	[동] ~와 관련되다; [동] ~에 공감하다
-mechanism	:	[명] 메커니즘, 기제
-mammal	:	[명] 포유동물
-excite	:	[동] 흥분시키다, 자극하다
-process	:	[명] 과정; [동] 처리하다, 가공하다
-entire	:	[형] 전체의
-translate	:	[동] 옮기다, 번역하다; [동] (into)(~에) 적용되다, 이어지다
-gain	:	[동] 얻다; [명] 이득, 얻는 것
-not at all	:	[부] 전혀 ~ 아닌
-subsidy	:	[명] 보조금
-regulation	:	[명] 규제, 규정
-power plant	:	[명] 발전소
-pollute	:	[동] 오염시키다
-coal	:	[명] 석탄
-profit	:	[명] 이익, 수익; [동] 이익을 얻다
-transition	:	[명] 전환, 이행
-take ~ into account	:	[동] ~을 고려하다
-prefer ~ over ...	:	[동] ~을 ...보다 선호하다
-expansion	:	[명] 확대, 확장
-match	:	[동] 일치하다; [동] ~에 맞먹다, 상응하다; [명] 성냥, 경기
-contraction	:	[명] 축소, 수축
-at the expense of ~	:	[전] ~을 희생하여, ~을 대가로 하여
-ordinary	:	[형] 평범한, 일반적인
-taxation	:	[명] 과세, 조세
-moreover	:	[부] 게다가
-perspective	:	[명] 관점, 시각
-efficiency	:	[명] 효율성
-distort	:	[동] 왜곡하다
-emission	:	[명] 배출(량)
-end up V-ing	:	[동] 결국 ~하게 되다
-consumption	:	[명] 소비, 소모
-worsen	:	[동] 악화시키다
-receive	:	[동] 받다, 수령하다
-electricity	:	[명] 전기, 전류
-freedom	:	[명] 자유
-increase	:	[명] 증가, 상승; [동] 증가하다, 늘다
-expense	:	[명] 비용, 지출
-suffer from ~	:	[동] ~로 고통받다
-pay for ~	:	[동] ~의 대금을 지불하다
-limit	:	[동] 제한하다, 한정하다; [명] 제한, 한계
-indeed	:	[부] 실제로, 사실
-lower	:	[형] 낮은; [동] 낮추다
-global warming	:	[명] 지구 온난화
-opportunity set	:	[명] 기회 집합
-lens	:	[명] 렌즈, (보는) 관점
-economic	:	[형] 경제의, 경제적인
-classical economics	:	[명] 고전 경제학
-notion	:	[명] 개념, 생각
-pricing	:	[명] 가격 책정
-allocate	:	[동] 할당하다, 배분하다
-resource	:	[명] 자원
+humanity	:	[명] 인류, 인간; [명] 인간애, 인류애
+influenza	:	[명] 유행성 감기, 독감
+pandemic	:	[명] 전세계적인 유행병
+estimate	:	[동] 추정하다
+smallpox	:	[명] 천연두
+claim	:	[동] (목숨을) 앗아 가다; [동] (자신의 것이라) 주장하다; [명] 주장
+life	:	[명] 생명, 목숨; [명] 생명체, 생물
+further	:	[형][부] 그 이상의, 더 나아가
+according to ~	:	[전] ~에 따르면
+affect	:	[동] ~에 영향을 미치다
+aspect	:	[명] 일면, 측면
+outbreak	:	[명] (전염병 등의) 발병, 발발
+viral	:	[형] 바이러스(성)의; [형] 입소문의, 입소문으로 퍼지는
+link ~ to …	:	[동] ~을 …와 관련시키다
+wild	:	[형] 야생의
+allow ~ toR	:	[동] ~가 …하는 것을 가능하게 하다
+prior	:	[형] 사전(事前)의, 이전의
+immunity	:	[명] 면역(력)
+historically	:	[부] 전통적으로, 과거에
+natural	:	[형] 자연의; [형] 자연스러운; [형] 타고난
+barrier	:	[명] 장벽, 벽
+prevent ~ from V-ing	:	[동] ~가 …하는 것을 막다
+infect	:	[동] 감염[전염]시키다
+industrialization	:	[명] 산업화, 공업화
+destroy	:	[동] ~을 파괴하다
+climate change	:	[명] 기후 변화
+original	:	[형] 본래의, 원래의; [형] 독창적인
+habitat	:	[명] 서식지
 result in ~	:	[동] 야기하다, 초래하다
-benefit	:	[명] 이득, 이익; [동] 이익이 되다; [동] (from) ~로부터 이익을 얻다
-reproduce	:	[동] 번식하다; [동] 재현하다, 복제하다
-transport	:	[동] 수송하다, 이동시키다; [명] 수송, 교통
-in the blink of an eye	:	[부] 눈 깜짝할 사이에
-
-[mg_h1_26.10_5: 26.10모 5]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-light-year	:	[명] 광년 (빛이 1년에 가는 거리)
-humanity	:	[명] 인류
-participate in ~	:	[동] ~에 참가하다, 참여하다
-prosperity	:	[명] 번영
-counselor	:	[명] 상담사
-generative	:	[형] 생성의, 생성형의
-potential	:	[명] 잠재력; [형] 잠재적인
-dimension	:	[명] 차원, 영역
-abundant	:	[형] 풍부한
-bias	:	[명] 편향, 편견
-scarcity	:	[명] 희소성, 부족
-upon ~	:	[형] (~에게) 닥친
-view	:	[명] 시야, 광경; [명] 견해, 관점; [동] 보다, 여기다
-good	:	[명] 상품, 재화
-communicate	:	[동] 의사소통하다
-fully	:	[부] 완전히
-explorer	:	[명] 탐험가
+increase	:	[명] 증가, 상승; [동] 증가하다, 늘다
+interaction	:	[명] 상호 작용
+between A and B	:	[전] A와 B 사이의
+present	:	[형] 있는, 현존하는; [동] 제시하다, 제공하다; [명] 현재, 선물
+concern	:	[명] 우려, 근심, 걱정; [동] 걱정시키다
+harmful	:	[형] 해로운, 유해한
+not necessarily	:	[숙] 반드시 ~은 아닌
+keeper	:	[명] 지키는 사람
+play a(n) ~ role in …	:	[동] …에서 ~한 역할을 하다
+crucial	:	[형] 결정적인, 매우 중요한
+support	:	[동] 부양하다; [동] 지지하다, 지원하다; [명] 부양, 지지, 지원
 researcher	:	[명] 연구자
-engineer	:	[명] 기술자, 엔지니어
-pollution	:	[명] 오염
-diversity	:	[명] 다양성
-with something on one's mind	:	[형] 마음에 어떤 생각을 품은
-concern	:	[명] 걱정, 우려, 관심사
-address	:	[동] 다루다, 해결하려 하다; [동] 연설하다; [명] 주소
-pay attention to ~	:	[동] ~에 주의를 기울이다
-response	:	[명] 반응, 응답
-attend to ~	:	[동] ~에 주의를 기울이다, ~을 처리하다
-some sort of	:	[형] 일종의, 어떤
-outward	:	[형] 겉으로 드러나는, 외적인
-signal	:	[명] 신호; [동] 나타내다, 신호를 보내다
-indicate	:	[동] 나타내다, 보여 주다
-whether ~ or otherwise	:	[접] ~이든 그렇지 않든
-key	:	[명] 비결, 핵심; [명] 열쇠
-intention	:	[명] 의도
-feel heard	:	[동] 경청받는다고 느끼다
-customer service	:	[명] 고객 서비스
-imagine	:	[동] 상상하다, 마음속에 그리다
-completely	:	[부] 완전히
-sort	:	[명] 종류; [동] 분류하다
-impossible	:	[형] 불가능한
-whether or not ~	:	[접] ~이든 아니든
-avoid	:	[동] 피하다
-figure out	:	[동] 알아내다, 이해하다
-hidden	:	[형] 숨겨진
-collect	:	[동] 수집하다
-make sense	:	[동] 말이 되다, 이치에 맞다
-the very ~	:	[형] 바로 그 ~ 
-take place	:	[동] 일어나다, 개최되다
-inseparable	:	[형] 분리할 수 없는
-define	:	[동] 정의하다, 규정하다
-beneath	:	[부][전] ~ 아래에
-intertwine	:	[동] 뒤얽히다, 밀접하게 관련되다
-central	:	[형] 중심적인, 핵심적인
-spatial	:	[형] 공간의, 공간적인
-spatial framework	:	[명] 공간적 틀
-medium / media	:	[명] 매체, 매개, 매질
-merely	:	[부] 그저, 단지
-context	:	[명] 맥락, 상황
-exterior	:	[형] 외부의, 바깥의
-suppose	:	[동] 생각하다, 가정하다
+investigate	:	[동] 조사하다
+sustain	:	[동] 유지하다, 연명하게 하다
+the planet	:	[명] 지구; [명] 그 행성
+instead of ~	:	[전] ~ 대신에
+harm	:	[동] ~에 해를 끼치다; [명] 해, 해로움
+act as ~	:	[동] ~의 역할을 하다
+regulator	:	[명] 조절기, 조절자
+bacterial	:	[형] 세균의
+population	:	[명] 개체수, 개체군; [명] 인구
+reproductive	:	[형] 생식의, 번식의
+function	:	[명] 기능; [동] 기능하다; [명] 함수
+on one’s own	:	[전명] 혼자 힘으로, 스스로
+organism	:	[명] 유기체, 생물체
 
-[mg_h1_26.10_6: 26.10모 6]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-literary	:	[형] 문학의
-critic	:	[명] 비평가
-make the point	:	[동] 주장하다, 요지를 밝히다
-elegantly	:	[부] 우아하게, 품위 있게
-wrap (up)	:	[동] 감싸다, 포장하다
-garment	:	[명] 의복, 옷
-at one and the same time	:	[부] 동시에
-disguise	:	[명] 변장, 위장
-characterization	:	[명] 성격 묘사, 특징 부여
-abstraction	:	[명] 추상, 추상적 개념
-passive	:	[형] 수동적인, 소극적인
-backdrop	:	[명] 배경
-experience	:	[명] 경험; [동] 경험하다, 겪다
-physical	:	[형] 육체의; [형] 물리적인
-heart	:	[명] 핵심; [명] 심장, 마음
-possibility	:	[명] 가능성
-framework	:	[명] 틀, 체계
-commonly	:	[부] 흔히, 보통
-surround	:	[동] 둘러싸다
-recall	:	[동] 기억해내다, 회상하다; [동] 리콜하다, 회수하다
-setting	:	[명] 설정, 세팅, 환경
-literature	:	[명] 문학; [명] 문헌(목록)
-at the heart of ~	:	[형] ~의 핵심에 있는
-wrap oneself up in ~	:	[동] ~에 몸을 감싸다, ~에 몰두하다
-no matter how ~	:	[접] 아무리 ~하든간에
-delineate	:	[동] 기술하다, 윤곽을 정하다
-evolutionary	:	[형] 진화의, 진화적인
-take ~ as a given	:	[동] ~을 당연한 것으로 받아들이다
-emerge	:	[동] 나타나다, 생겨나다
-simplify	:	[동] 단순화하다
-assumption	:	[명] 가정, 추정
-verbal	:	[형] 언어의, 말로 하는
-evolution	:	[명] 진화, 발전
-variation	:	[명] 변이, 변화
-generation	:	[명] (같은) 세대; [명] 생성, 발생
-inheritance	:	[명] 유전, 상속
-physicist	:	[명] 물리학자
-mass	:	[명] 대중; [명] 덩어리; [명] 질량
-charge	:	[명] 전하, [동] 충전하다; [명] 요금, [동] 부과하다; [명] 책임, [동] 기소하다
-particle	:	[명] 입자
-atomic	:	[형] 원자의
-bond	:	[명] 결합, 유대, 결속
-electron	:	[명] 전자
-move on	:	[동] (다음으로) 넘어가다
-analysis	:	[명] 분석
-in the absence of ~	:	[전] ~이 없을 때, ~이 없는 상태에서
-accounting	:	[명] 설명, 해명
-particular	:	[형] 특정한, 개개의
-present	:	[동] 제시하다, 제공하다; [명] 현재; [명] 선물; [형] 있는, 현존하는
-somehow	:	[부] 왠지, 어떻게든, 여하튼
-detail	:	[명] 세부 사항
-attempt	:	[명] 시도, 도전; [동] 시도하다
-explain	:	[동] 설명하다, 해명하다
-measure	:	[동] 측정하다; [명] 조치, 대책
-complete	:	[형] 완전한, 완료된; [동] 완수하다, 완료하다
-account	:	[명] 기술, 설명; [명] 계정, 계좌
-fine	:	[형] 미세한, 가는; [형] 좋은, 고급의; [명] 벌금
-of interest	:	[형] 관심을 두는, 관심 대상인
-biological	:	[형] 생물학적인
+[E2_L3_2: 3과 단어 2]
+# 3과의 단어 정령들. 잘 보살펴주자.
+multiply	:	[동] 증식[번식]하다; [동] 곱해지다, 배가되다
+continue	:	[동] 계속하다, 지속하다
+eventually	:	[부] 결국, 마침내
+produce	:	[동] 만들어내다, 생성하다; [명] 농작물
+go on toR	:	[동] 다음으로 ~하다, 이어서 ~하다
+whole	:	[형] 전체의, 전부의
+control	:	[동] ~을 통제·억제하다; [명] 통제, 제어
+excessive	:	[형] 과도한, 지나친
+growth	:	[명] 성장, 증가
+certain	:	[형] 어떤, 특정의; [형] 확신하는
+significance	:	[명] 중요성, 의의
+supply ~ to …	:	[동] ~을 …에게 공급하다
+oxygen	:	[명] 산소
+source	:	[명] 원천, 근원, 출처
+nutrient	:	[명] 영양소, 영양분
+release	:	[동] 방출하다, 내뿜다, [명] 배출; [동] 발매하다, [명] 발매
+infection	:	[명] 감염, 전염
+remains	:	[명] 유해, 사체, 남아있는 것
+lack	:	[명] 결여, 부족; [동] ~가 결여되어 있다, 부족하다
+disappear	:	[동] 사라지다
+survive	:	[동] (사건 등에서) 생존하다, 살아남다
+species / species	:	[명] (생물학적) 종
+regulate	:	[동] 조절하다, 조정하다, 규제하다
+excessively	:	[부] 과도하게, 지나치게
+reduce	:	[동] 줄이다; [동] 격하시키다
+in turn	:	[전명] 차례로; [전명] 결국, 결과적으로
+room	:	[명] 여지, 기회, 가능성; [명] 방, 공간
+flourish	:	[동] (동식물이) 잘 자라다, 번성하다
+considering ~	:	[전] ~을 고려하면
+chain	:	[명] 일련의 것, 연쇄; [명] 사슬, 체인
+assume	:	[동] 가정하다
+fulfill	:	[동] (기능·역할 등)을 수행하다
+ecosystem	:	[명] 생태계
+evolution	:	[명] 진화
+recognized	:	[형] 알려진
+contribution	:	[명] 기여, 공헌
+cell	:	[명] 세포; [명] (감옥 등의) 방 한 칸
+host	:	[명] 숙주; [명] 주인, 주최자; [동] 주최하다
+egg	:	[명] (생물의) 알; [명] 난자
+sperm	:	[명] (수컷의) 정자
+pass ~ down to …	:	[동] ~을 …에게 물려주다
+offspring	:	[명] (동물의) 새끼
+insertion	:	[명] 삽입
+genome	:	[명] 게놈, 유전체
+potential	:	[명] 잠재력; [형] 잠재적인
+development	:	[명] 발달, 성장; [명] (사진의) 현상; [명] (병의) 발병
+placenta	:	[명] 태반
+mammal	:	[명] 포유동물, 포유류
+complex	:	[형] 복잡한; [명] 복합단지
+organ	:	[명] 장기, 기관
+fetus	:	[명] 태아
+facilitate	:	[동] 촉진하다, 용이하게 하다
+exchange	:	[명] 교환; [동] 교환하다
+waste product	:	[명] (신체의) 노폐물
+protect ~ from …	:	[동] ~을 …로부터 보호하다
+immune	:	[형] 면역의
+female	:	[명] 암컷, 여성
 
-[mg_h1_26.10_7: 26.10모 7]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-trace	:	[동] 추적하다; [명] 흔적
-recognition	:	[명] 인정, 인식
-burnout	:	[명] 번아웃, 극도의 피로
-occupational	:	[형] 직업의, 직업상의
-mark	:	[명] 표시, 마크, [동] 표시하다; [동] (중요한 시점을) 나타내다, 기념하다
-discourse	:	[명] 담론, 논의
-designation	:	[명] 지정
-reframe	:	[동] 재구성하다, 다른 관점으로 보다
-clinical	:	[형] 임상의
-assessment	:	[명] 평가
-shift	:	[동] 이동하다, 바뀌다, 전환하다; [명] 이동, 변화
-systemic	:	[형] 체계적인, 제도 전반의
-adopt	:	[동] 채택하다, 도입하다; [동] 입양하다
-structural	:	[형] 구조적인
-intervention	:	[명] 개입, 조치
-rely on ~	:	[동] ~에 의존하다
-solely	:	[부] 오로지, 단지
-remedy	:	[명] 해결책, 개선책
-clinician	:	[명] 임상의, 임상 전문가
-collaborate	:	[동] 협업하다, 협력하다
-root cause	:	[명] 근본 원인
-resilience	:	[명] 회복력, 탄력
-rooted (in ~)	:	[형] (~에) 뿌리를 둔
-socio-economic	:	[형] 사회 경제적인
-open the door to ~	:	[동] ~의 길을 열다
-burden	:	[명] 부담, 짐
-cope with ~ :	[동] (~에) 대처하다, 대응하다
-organizational	:	[형] 조직의, 조직적인
-adapt	:	[동] 적응하다, 적용하다; [동] 각색하다, 개작하다
-leadership	:	[명] 지도부, 리더십
-invite	:	[동] (~하도록) 이끌다, 초대하다
-workplace	:	[명] 직장, 업무 현장
-responsibility	:	[명] 책임
-attention	:	[명] 주목, 주의, 관심
-prevention	:	[명] 예방, 방지
-employer	:	[명] 고용주
-in practice	:	[부] 실제로는
-contribute (to ~)	:	[동] (~에) 기여하다, 원인이 되다
-away from ~	:	[전] ~로부터 멀어져
-personal failing	:	[명] 개인적인 결함
-broader	:	[형] 더 넓은, 더 포괄적인
-policy-level	:	[형] 정책 수준의
-motion	:	[명] 움직임, 운동
-disturb	:	[동] 교란하다, 흐트러뜨리다
-molecule	:	[명] 분자
-note	:	[동] 언급하다; [동] 주목하다; [동] 필기하다; [명] 지폐, 음표
-colorless	:	[형] 무색의
-occur	:	[동] 일어나다, 발생하다
-disturbance	:	[명] 교란, 방해
-gauge	:	[명] 측정기, 계기
-instrument	:	[명] 기구, 도구
-philosophical	:	[형] 철학적인
-riddle	:	[명] 수수께끼
-eardrum	:	[명] 고막
-nothing more than ~	:	[명] ~에 불과한 것
-concept	:	[명] 개념
-product	:	[명] 생산물, 상품, 산물
-mess	:	[명] 혼란, 엉망인 상태, 난장판
-creature	:	[명] 생명체, 생물
-
-[mg_h1_26.10_8: 26.10모 8]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-hit	:	[동] 도달하다, 치다; [명] 히트, 대박
-make a mess	:	[동] 엉망으로 만들다
-the same is true of ~	:	[동] ~도 마찬가지이다
-face to face	:	[부] 마주 보고, 대면하여
-range	:	[명] 범위, 다양성
-cue	:	[명] 신호, 단서
-subset	:	[명] 부분 집합, 일부
-artificial	:	[형] 인위적인, 인공의
-seam	:	[명] (옷의) 이음매, 경계
-impact	:	[명] 영향, 충격; [동] 충돌하다, 영향을 미치다
-remote	:	[형] 원격의, 멀리 떨어진
-predict	:	[동] 예측하다
-describe (~ as ...)	:	[동] 묘사하다, 설명하다
-seamless	:	[형] 끊김 없는, 매끄러운
-functional	:	[형] 기능적인
-separation	:	[명] 분리
-remotely	:	[부] 원격으로
-separate	:	[형] 분리된, 별개의; [동] 분리하다
-collaborator	:	[명] 협력자, 공동 작업자
-share	:	[동] 공유하다; [명] 지분, 몫, 점유율
-task	:	[명] 과업, 임무; [동] 과제/임무를 주다
-technology	:	[명] 기술
-professor	:	[명] 교수
-conferencing	:	[명] 회의, 컨퍼런스 하기
-screen	:	[명] 화면; [동] 막다, 거르다
-document	:	[명] 문서; [동] 기록하다
-at the same time	:	[부] 동시에
-regardless of ~	:	[전] ~에 상관없이
-statement	:	[명] 진술, 말; [명] 상태; [명] 명세서
-claim	:	[명] 주장, [동] 주장하다; [명] 권리; [동] (목숨 등을) 앗아가다
-as a function of ~	:	[전] ~에 따라, ~의 함수로서
-repetition	:	[명] 반복
-psychologist	:	[명] 심리학자
-certain	:	[형] 어떤, 특정한; [형] 확신하는
-general knowledge	:	[명] 일반 상식
-trivia	:	[명] 잡학 상식, 사소한 정보
-evaluate	:	[동] 평가하다
-interval	:	[명] 간격
-crucially	:	[부] 결정적으로, 중요하게는
-repeat	:	[동] 반복하다
-rating	:	[명] 평가, 등급
-versus	:	[전] ~ 대, ~에 비해
-astonishing	:	[형] 놀라운, 믿기 어려운
-in other words	:	[부] 다시 말해
-illusory	:	[형] 착각의, 환상에 불과한
-truth	:	[명] 진실
-general	:	[형] 일반적인; [명] 장군
-compare	:	[동] 비교하다
-effect	:	[명] 효과, 영향
-submerge	:	[동] 물속에 잠그다
-atmospheric pressure	:	[명] 대기압
-surrounding	:	[형] 주위의, 주변의
-maintain	:	[동] 유지하다, 지속하다
-equal	:	[형] 같은, 동등한
-external	:	[형] 외부의
-internal	:	[형] 내부의
-surface	:	[명] 표면
-constant	:	[형] 일정한, 끊임없는; [명] 상수
-balance	:	[명] 균형; [동] 균형을 맞추다; [명] 저울
-
-[mg_h1_26.10_9: 26.10모 9]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-lung	:	[명] 폐
-air cavity	:	[명] 공기가 들어 있는 공간
-dive	:	[명] 잠수; [동] 잠수하다
-in addition to ~	:	[전] ~에 더하여, ~ 외에도
-atmospheric	:	[형] 대기의
-act on ~	:	[동] ~에 작용하다; [동] ~를 기반으로 행동하다
-breathing mixture	:	[명] 호흡용 혼합 기체
-supply	:	[동] 공급하다; [명] 공급품
-diver	:	[명] 잠수부
-apply	:	[동] (힘 등을) 가하다; [동] 지원하다; [동] 적용하다; [동] 도포하다, 바르다
-proportionally	:	[부] 비례하여
-depth	:	[명] 깊이
-it follows that ~	:	[동] 따라서 ~이다, ~라는 결론이 나온다
-stabilize	:	[동] 안정시키다
-atmosphere	:	[명] 대기; [명] (단위) 기압
-condition	:	[명] 상태; [명] 조건; [명] 질환
-pressure	:	[명] 압력
-square meter	:	[명] 제곱미터
-cavity	:	[명] 공동, 구멍
-breathing	:	[명] 호흡
-mixture	:	[명] 혼합물
-require	:	[동] 요구하다, 필요로 하다
-goldenrod	:	[명] 미역취(국화과 식물)
-threat	:	[명] 위협
-predator	:	[명] 포식자
-chemical	:	[형] 화학적인; [명] 화학물질
-alarm call	:	[명] 경고 신호, 경계음
-specific	:	[형] 특정한, 구체적인
-comprehensible	:	[형] 이해할 수 있는
-kin	:	[명] 친족, 혈족
-on the rare occasion	:	[접] 드물게 ~할 때
-hostile	:	[형] 적대적인, (환경이) 험한
-territory	:	[명] 영역, 지역
-code	:	[동] 암호화하다
-broadcast	:	[동] 방송하다, 널리 알리다; [명] 방송
-loudspeaker	:	[명] 확성기
-so to speak	:	[부] 말하자면
+[E2_L3_3: 3과 단어 3]
+# 3과의 단어 정령들. 잘 보살펴주자.
+leave	:	[동] 떠나다; [동] ~을 (놓아)두다; [동] ~을 …한 상태로 두다
+location	:	[명] 장소, 위치
+vulnerable	:	[형] 취약한, 연약한
+predator	:	[명] 포식자, 포식 동물
+emergence	:	[명] 출현, 대두
+young	:	[명] (집합적) (동물의) 새끼; [형] 어린
+remote	:	[형] 멀리 떨어진, 원격의
+ancestor	:	[명] 조상, 선조
+report	:	[동] 보고하다, 알리다; [동] 보도하다; [명] 보고서, 기사
+serve	:	[동] ~에 도움이 되다; [동] (as) ~의 역할을 하다; [동] 제공하다, 대접하다
+means	:	[명] 수단, 방법
+cure	:	[명] 치료제, 치료법; 치유; [동] 치료하다, 치유하다
+expand	:	[동] 확대되다
+utilize	:	[동] 활용하다, 이용하다
+arise	:	[동] 생기다, 발생하다
+notable	:	[형] 주목할 만한
+interest	:	[명] 흥미로움, 매력적임, 관심; [동] 관심을 끌다; [명] 이자, 이득
+gene	:	[명] 유전자
+therapy	:	[명] 치료, 요법
+cancer	:	[명] 암, 종양
+compare ~ to …	:	[동] ~를 …와 비교하다
+guide	:	[명] 안내서, 지침; [동] 인도하다, 가이드하다
+govern	:	[동] 지배하다
+genetic	:	[형] 유전자의
+disorder	:	[명] 이상, 장애, 질환
+step in	:	[동] 끼어들다, 개입하다
+fix	:	[동] 고치다, 처리하다; [동] 고정시키다
+essence	:	[명] 본질, 정수
+lie (- lay - lain)	:	[동] (생물이) 누워있다; [동] (물체가) 있다
+deliver ~ to …	:	[동] ~을 …에게 전달하다
+correct	:	[동] 바로잡다, 수정하다; [형] 맞는, 옳은
+patient	:	[명] 환자; [형] 참을성 있는
+enable ~ toR	:	[동] ~가 …할 수 있게 하다
+modify	:	[동] 수정하다, 변경하다
+carrier	:	[명] (병원체의) 매개체, 보균자
+fight ~ off	:	[동] (질병 등)과 싸워 이겨내다
+based on[upon] ~	:	[전] ~에 기초를 둔, ~을 바탕으로 하는
+notion	:	[명] 생각, 개념, 관념
+manipulate	:	[동] (배후에서) 조작하다; [동] (자료 등을) 가공하다, 조작하다
+specifically	:	[부] 구체적으로, 분명하게
+target	:	[동] 목표로 삼다; [명] 목표
+unharmed	:	[형] 다치지[손상되지] 않은
+still	:	[부] 아직(도); [형] 가만히 있는, 고요한; [부] 훨씬
+stage	:	[명] 단계, 국면, 시기; [명] 무대, 스테이지
+involve ~ in …	:	[동] ~을 …에 참여시키다
+discover	:	[동] 발견하다
+incurable	:	[형] 치료 불가능한, 불치의
+find ~ out	:	[동] 알아내다
+let alone	:	[전] ~은 말할 것도 없고, ~은 커녕
+characteristic	:	[명] 특징, 특성
+equip ~ toR	:	[동] ~에게 …할 능력[기술]을 키워주다
 beneficial	:	[형] 유익한, 이로운
-mate	:	[동] 짝짓기하다; [명] 짝, 짝짓기 상대
-pollinator	:	[명] 수분 매개자(꽃가루를 옮기는 생물)
-thereby	:	[부] 그렇게 함으로써
-broadly	:	[부] 폭넓게, 널리
-endanger	:	[동] 위태롭게 하다
-confirm	:	[동] 확인해 주다, 입증하다
-alarm	:	[명] 경보. [동] 경보를 울리다; [명] 불안
-incredibly	:	[부] 믿을 수 없을 정도로, 엄청나게
-occasion	:	[명] 경우, 때
-attack	:	[명] 공격; [동] 공격하다
-neighbor	:	[명] 이웃; [동] 이웃하다, 옆에 있다
-phrase	:	[명] 구절, 표현
-whisper	:	[명] 속삭임; [동] 속삭이다
-communication	:	[명] 의사소통
-tough	:	[형] 힘든, 거친
+purpose	:	[명] 목적, 의도
+defense	:	[명] 방어책, 방어 수단[시설]
+diversity	:	[명] 다양성
+reach	:	[동] 이르다, 도달하다
+working	:	[명] 작동[운용/작용] (방식).
+
+
+[mg_h2 26.10_1: 26.10모 1]
+#고2 26.10모 단어를 쪼갠거
+possibility	:	[명] 가능성
+suitable	:	[형] 적합한, 알맞은
+pace	:	[명] 속도, 보조
+spontaneously	:	[부] 자발적으로, 저절로
+curiosity	:	[명] 호기심
+independence	:	[명] 독립(심), 자립
+dare toR	:	[동] 감히 ~하다, 담대하게 ~하다
+initiative	:	[명] 진취성, 주도권
+possess	:	[동] 소유하다, 지니다
+autonomy	:	[명] 자율(성)
+accustomed to ~	:	[형] ~에 익숙한
+instruction	:	[명] 지시, 설명
+arrange	:	[동] 준비하다, 배치하다
+fertile	:	[형] 비옥한
+soil	:	[명] 흙, 토양
+core	:	[명] 핵심, 중심
+carpenter	:	[명] 목수
+at one's own pace	:	[숙] 자신의 속도로
 environment	:	[명] 환경
-narrowly	:	[부] 좁게, 간신히
-accidentally	:	[부] 우연히
-infinite	:	[형] 무한한
-autoplay	:	[명] 자동 재생
-
-[mg_h1_26.10_10: 26.10모 10]
-# 고2 26.10모 단어를 적당히 쪼갰다. 쫄지말고 들어와.
-purchase	:	[명] 구매; [동] 구매하다
-interfere with ~	:	[동] ~을 방해하다
-sustainability	:	[명] 지속 가능성
-overconsumption	:	[명] 과소비, 과잉 소비
-load	:	[명] 부담, 짐; [동] 불러오다, 로딩하다; [동] (짐을) 싣다
-processing	:	[명] (데이터) 처리
-force (~ toR)	:	[동] 강요하다; [명] 힘; [명] 군대
-consume	:	[동] 소비하다; [동] 먹다, 섭취하다
-static	:	[형] 정적인, 움직이지 않는
-by default	:	[부] 기본값으로, 기본 설정으로
-significantly	:	[부] 상당히, 크게
-disable	:	[동] (기능을) 끄다, 비활성화하다
-bury	:	[동] 묻다, 깊이 숨기다
-opt out	:	[동] (참여하지 않기로) 선택하다, 탈퇴하다
-acknowledge	:	[동] 인정하다
-nudge	:	[동] (슬쩍) 유도하다, 살짝 밀다; [동] 옆구리를 콕 찌르다
-highlight	:	[동] 강조하다, 부각하다
+explore	:	[동] 탐사하다, 탐구하다
+creativity	:	[명] 창의성
+challenge	:	[명] 도전, 과제; [동] 도전하다; [동] 이의를 제기하다
+gradually	:	[부] 서서히, 점진적으로
+rather than ~	:	[숙] ~보다는, ~가 아니라
+actively	:	[부] 적극적으로
+naturally	:	[부] 자연스럽게, 편안하게
+carve	:	[동] 조각하다, 깎아서 만들다
+will	:	[명] 의지; [명] 유언장
+complex	:	[형] 복잡한; [명] 복합단지
+worldview	:	[명] 세계관
+perception	:	[명] 인식, 지각
+repay	:	[동] 갚다, 상환하다
+opportunity cost	:	[숙] 기회비용
+term	:	[명] 기간, 조건; [명] 용어, 말; [명] (-s) 관점, 측면
+by definition	:	[숙] 정의상, 본질적으로
+unknowable	:	[형] 알 수 없는
+worthwhile	:	[형] 가치 있는, 보람 있는
+income	:	[명] 소득, 수입
+factor	:	[명] 요인; [동] (in) 고려하다, 감안하다
+to put it another way	:	[부] 다시 말해서, 달리 표현하면
+credit	:	[명] 신용; [명] 학점
+loan	:	[명] 대출
+rate of interest	:	[숙] 이자율
+consider	:	[동] 고려하다
+rate	:	[명] 비율, 요율
+imagine	:	[동] 상상하다, 마음속에 그리다
+chance	:	[명] 가능성, 기회
+definition	:	[명] 정의
+value	:	[명] 가치; [동] 가치를 매기다; [동] 소중히 여기다
+benefit from ~	:	[숙] ~로부터 이익을 얻다
+involve	:	[동] 포함하다, 수반하다
+amount	:	[명] 양, 액수
 ethical	:	[형] 윤리적인
-transparent	:	[형] 투명한
-reversible	:	[형] 되돌릴 수 있는
-aligned with ~	:	[형] ~과 일치하는
-responsible	:	[형] 책임감 있는, 책임 있는
-default	:	[명] 기본값, 기본 설정; [명] 채무불이행
-alternative	:	[형] 대안의, 대신의; [명] 대안
-powerless	:	[형] 무력한, 힘이 없는
-agency	:	[명] 주체성, 행위 주체성; [명] 대리기관
-encourage	:	[동] 격려하다, 촉진하다
-keep V-ing	:	[동] 계속 ~하다
+consideration	:	[명] 고려, 숙고
+awareness	:	[명] 인식, 자각
+sustainability	:	[명] 지속 가능성
+called upon toR	:	[형] ~하도록 요구받은
+address	:	[동] (문제를) 다루다, 해결하려 하다
+
+
+[mg_h2 26.10_2: 26.10모 2]
+#고2 26.10모 단어를 쪼갠거
+consumerism	:	[명] 소비주의
+platform	:	[명] 플랫폼, 승강장
+attitude	:	[명] 태도
+promote	:	[동] 홍보하다, 촉진하다; [동] 승진시키다
+equality	:	[명] 평등
+justice	:	[명] 정의, 공정
+meaningful	:	[형] 의미 있는
+align	:	[동] (with) ~와 일치시키다, 맞추다
+principle	:	[명] 원칙, 신념
+increasingly	:	[부] 점점 더
 content	:	[명] 내용(물), 콘텐츠; [형] 만족하는
-force ~ toR	:	[동] ~가 R하도록 강요하다
-deliver	:	[동] 배달하다, 전하다; [동] (새끼를) 낳다
-decision	:	[명] 결정, 결심
-artwork	:	[명] 예술 작품, 삽화
-as a result	:	[부] 그 결과
-search ~ for ...	:	[동] ~를 수색해 ...을 찾다
-form	:	[명] 형태, 형식; [동] 형성하다
-carefully	:	[부] 주의 깊게, 신중하게
-environmental	:	[형] 환경의, 환경적인
-remove	:	[동] 없애다, 제거하다
-powerful	:	[형] 영향력이 큰, 강력한
+impact	:	[명] 영향, 충격
+include	:	[동] 포함하다
+sustainable	:	[형] 지속 가능한
+related to ~	:	[숙] ~와 관련된
+raise	:	[동] 높이다, 올리다
+focus on ~	:	[동] ~에 집중하다, 초점을 맞추다
+ensure	:	[동] 보장하다, 확실히 하다
+drive	:	[동] 이끌다, 추동하다; [동] 몰다, 운전하다; [명] 원동력
+cause	:	[동] 초래하다, 야기하다; [명] 원인; [명] 명분
+audience	:	[명] 청중, 관객
+influence	:	[명] 영향력; [동] 영향을 미치다
+responsibility	:	[명] 책임
+broad	:	[형] 넓은
+behavior / behaviour	:	[명] 행동, 행위
+not only ~ but also	:	[숙] ~뿐만 아니라 ~도
+cephalopod	:	[명] 두족류
+neurobiology	:	[명] 신경생물학
+neuron	:	[명] 뉴런, 신경 세포
+roughly	:	[부] 대략, 거의
+distribute	:	[동] 배포하다, 유통하다
+concentrate	:	[동] 집중시키다, 모으다
+nerve	:	[명] 신경
+sensory	:	[형] 감각의
+extension	:	[명] 연장(된 부분), 확장
+interact	:	[동] (with) ~와 상호 작용하다
+sucker	:	[명] 빨판
+grip	:	[명] 잡기, 쥐기, 꽉 쥐는 힘
+detect	:	[동] 발견하다, 탐지하다
+chemical	:	[형] 화학적인
+marine	:	[형] 해양의, 바다에 사는; [명] 해병대
+capable	:	[형] 유능한, (of) ~할 수 있는, 
+mechanism	:	[명] 기제, 작동 구조, 메커니즘
+suit	:	[명] 정장, 슈트; [동] 적합하다, 꼭 맞다
+suggest	:	[동] 제안하다; [동] 시사하다, 암시하다
+unusual	:	[형] 특이한, 보통이 아닌
+locate	:	[동] ~에 위치하다; [동] (위치를) 찾아내다
+entirely	:	[부] 완전히, 전적으로
+contain	:	[동] 포함하다, 함유하다
+respond to ~	:	[숙] ~에 반응하다
+locally	:	[부] 지역적으로, 현지에서
+detailed	:	[형] 상세한
+function	:	[명] 기능; [동] 기능하다; [명] 함수
+nervous	:	[형] 초조한, 불안한; [형] 신경의
+structure	:	[명] 구조; [명] 구조물, 건물
+surface	:	[명] 표면
+practical	:	[형] 실용적인, 실질적인
+effectively	:	[부] 효과적으로, 사실상
+line	:	[동] ~을 따라 늘어서다; [명] 줄, 선
+
+[mg_h2 26.10_3: 26.10모 3]
+#고2 26.10모 단어를 쪼갠거
+nervous system	:	[명] 신경계
+consistent	:	[형] 일관된
+justify	:	[동] 정당화하다, 합리화하다
+slavery	:	[명] 노예 제도
+privilege	:	[명] 특권
+contemplation	:	[명] 사색, 숙고
+worthy	:	[형] ~을 받을 만한, 가치 있는
+assertion	:	[명] 주장
+self-serving	:	[형] 자기 잇속만 차리는
+inclusive	:	[형] 포용적인, 차별 없는
+indicator	:	[명] 지표, 척도
+elite	:	[명] 엘리트, 상류층
+flawed	:	[형] 결함이 있는
+underprivileged	:	[형] 혜택받지 못한
+deserve	:	[동] ~할 자격이 있다
+trap	:	[동] 가두다, 붙잡다; [명] 함정, 덫
+somehow	:	[부] 왠지, 어떻게든
+serve	:	[동] ~에 도움이 되다; [동] (as) ~의 역할을 하다; [동] 제공하다, 대접하다
+particular	:	[형] 특정한
+exception	:	[명] 예외
+nearly	:	[부] 거의
+tend toR	:	[동] ~하는 경향이 있다
+as a result	:	[숙] 그 결과
+for all	:	[숙] ~에도 불구하고
+era	:	[명] 시대
+oddly	:	[부] 이상하게
+thinker	:	[명] 사상가
+have no difficulty (in) V-ing	:	[숙] ~하는 데 어려움이 없다
+survival	:	[명] 생존, 살아남음
+hurdle	:	[명] 장애물, 허들
+clear	:	[동] (장애물을) 넘다, 통과하다
+demographically	:	[부] 인구 통계학적으로
+humankind	:	[명] 인류
+state of nature	:	[숙] 자연 상태
+wasteful	:	[형] 낭비하는
+fig	:	[명] 무화과
+baboon	:	[명] 개코원숭이
+fairly	:	[부] 꽤, 상당히
+typical	:	[형] 전형적인, 일반적인
+primate	:	[명] 영장류
+infant	:	[명] 유아, 젖먹이
+mortality	:	[명] 사망률, 필멸, 죽음을 면치 못함
+pre-modern	:	[형] 근대 이전의
+agricultural	:	[형] 농업의
+ape	:	[명] 유인원
+hunter-gatherer	:	[명] 수렵 채집인
+ancestor	:	[명] 조상, 선조
+reproduce	:	[동] 번식하다
+otherwise	:	[부] 그렇지 않으면, 그와 달리, 다르게
+population	:	[명] 개체수, 개체군; [명] 인구
+seed	:	[명] 씨앗
+quarter	:	[명] 4분의 1
+society	:	[명] 사회
+occur	:	[동] 일어나다, 발생하다
+growth	:	[명] 성장, 증가
+recent	:	[형] 최근의, 근래의
+had it been otherwise	:	[숙] 만약 그렇지 않았더라면
+confirm	:	[동] 확인해 주다, 입증하다
+dominance	:	[명] 우세, 지배
+
+[mg_h2 26.10_4: 26.10모 4]
+#고2 26.10모 단어를 쪼갠거
+nonverbal	:	[형] 비언어적인
+phenomenon	:	[명] 현상
+pronounced	:	[형] 뚜렷한, 현저한
+conflict	:	[명] 갈등, 충돌; [동] 상충하다, 모순되다
+differ	:	[동] 다르다
+manipulate	:	[동] (배후에서) 조작하다; [동] (자료 등을) 가공하다, 조작하다
+verbal	:	[형] 언어의, 말로 하는
+accompany	:	[동] 동반하다, 수반하다
+match	:	[동] 일치하다; [명] 경기, 매치; [명] 성냥
+inclined toR	:	[형] ~하는 경향이 있는, 마음이 기우는
+workload	:	[명] 업무량
+take over	:	[동] 인계받다, 떠맡다
+replace	:	[동] 대신하다, 대체하다
+pronounce	:	[동] 발음하다
+attempt	:	[명] 시도[도전]; [동] 시도하다
+verbally	:	[부] 말로, 구두로
+trust	:	[동] (사람을) 신뢰하다, 믿다; [명] 믿음, 신뢰
+look away	:	[숙] 눈길을 돌리다, 시선을 피하다
+displeased	:	[형] 불쾌한, 언짢은
+force a smile	:	[숙] 억지웃음을 짓다
+i.e.	:	[부] 즉
+spoken	:	[형] 구어의, 말로 하는
+notice	:	[동] 알아차리다; [명] 공지, [동] 공지하다
+force	:	[동] 억지로 ~하다, 강요하다; [명] 힘; [명] 군대
+colleague	:	[명] 동료
+expression	:	[명] 표정, 표현
+overwhelming	:	[형] 압도적인
+majority	:	[명] 대다수
+pack	:	[동] 채우다, 꾸려 넣다; [명] 팩, 꾸러미
+setting	:	[명] 설정, 세팅, 환경
+lay down	:	[숙] (규칙 등을) 정하다, 내려놓다
+inspect	:	[동] 점검하다, 검사하다
+triumph	:	[명] 승리, 대성공
+engineering	:	[명] 공학, 설계
+consciously	:	[부] 의식적으로
+deliberate	:	[형] 신중한; [형] 의도적인
+costly	:	[형] 비용이 많이 드는
+outcompete	:	[동] 경쟁에서 이기다
+free	:	[동] 해방하다, 자유롭게 하다; [형] 자유로운; [형] 무료인, 공짜인
+deck	:	[명] (배의) 갑판
+default	:	[명] 기본 설정, 초기값
+flaw	:	[명] 결함, 흠
+arguably	:	[부] 거의 틀림없이, 주장하건대
+affordable	:	[형] (가격이) 알맞은, 저렴한
+automation	:	[명] 자동화
+manipulation	:	[명] 조작, 교묘한 조종
+calculation	:	[명] 계산
+in one light	:	[숙] 어떤 관점에서
+behavior / behaviour	:	[명] 행동, 행위
+decade	:	[명] 10년
+hopeless	:	[형] 가망 없는, 절망적인
+fork	:	[명] 갈림길, 분기점; [명] 포크
+in real time	:	[숙] 실시간으로
+creature	:	[명] 생명체, 생물
+precisely	:	[부] 정확히
+captain	:	[명] 선장, 주장
+come up	:	[숙] 생기다, 나타나다
+weaken	:	[동] 약화시키다
+tie	:	[명] 유대, 관계; [동] 묶다, 엮다; [명] 넥타이
+
+[mg_h2 26.10_5: 26.10모 5]
+#고2 26.10모 단어를 쪼갠거
+unite A to B	:	[동] A를 B에 결속시키다, 통합시키다
+intermediary	:	[형] 매개하는, 중개의
+institution	:	[명] 제도, 기관
+diminish	:	[동] 줄이다, 감소시키다
+overlap	:	[동] 겹치다, 중복되다
+court	:	[명] 법원, 법정; [명] 정원 [명] 코트, 경기장
+harmonious	:	[형] 조화로운, 화목한
+collective	:	[형] 집단의, 공동의
+put pressure on ~	:	[숙] ~에게 압력을 가하다
+judicial	:	[형] 사법의, 재판의
+politicize	:	[동] 정치화하다
+popularize	:	[동] 대중화하다
+habitual	:	[형] 습관적인
+convert A into B	:	[숙] A를 B로 전환하다, 바꾸다
+virtual	:	[형] 가상의
+dimension	:	[명] 차원, 영역
+democratic	:	[형] 민주적인, 민주주의의
+negotiation	:	[명] 협상
+square	:	[명] 광장; [명] 정사각형; [명] 제곱
+state	:	[명] 국가; [명] 상태; [동] 말하다, 언급하다
+practice	:	[명] 연습; [명] 실천, 실행; [명] 관행, 관습; [동] 연습하다, 실천하다
+tradition	:	[명] 전통
+functioning	:	[명] 기능, 작용
+mediate	:	[동] 매개하다, 중재하다
+process	:	[명] 과정; [동] 처리하다, 가공하다
+harmful	:	[형] 해로운, 유해한
+public square	:	[숙] 공공 광장, 공론의 장
+state of law	:	[숙] 법치 국가
+appropriate	:	[형] 적절한
+judge	:	[동] 판단하다, 평가하다; [명] 판사, 심판
+pressure	:	[명] 압력
+supportive	:	[형] 지지하는, 격려하는
+minority	:	[명] 소수, 소수자
+responsive	:	[형] 반응하는, 호응하는
+expectation	:	[명] 기대
+ongoing	:	[형] 계속 진행 중인
+evolve	:	[동] 진화하다, 서서히 발전하다
+sequence	:	[명] 순서, 연속
+plasticity	:	[명] 가소성, 유연성
+perspective	:	[명] 관점, 시각
+concept	:	[명] 개념
+capacity	:	[명] 능력, 수용력
+adapt	:	[동] 적응하다
+reorganize	:	[동] 재편성하다, 재조직하다
+cognitive	:	[형] 인지의
+highlight	:	[동] 강조하다
+passive	:	[형] 수동적인, 소극적인
+recipient	:	[명] 받는 사람, 수령인
+agent	:	[명] 주체, 행위자; [명] 대리인, 대리자
+stability	:	[명] 안정(성)
+decline	:	[명] 쇠퇴, 감소
+rigid	:	[형] 엄격한, 경직된
+outlook	:	[명] 관점, 전망
+lifespan	:	[명] 수명, 생애
+extent	:	[명] 정도, 범위
+vary	:	[동] 다르다, 다양하다
+adaptation	:	[명] 적응
+transformation	:	[명] 변화, 변형
+variation	:	[명] 변화, 변동
+
+[mg_h2 26.10_6: 26.10모 6]
+#고2 26.10모 단어를 쪼갠거
+development	:	[명] 발달, 성장; [명] (사진의) 현상; [명] (병의) 발병
+flexible	:	[형] 유연한, 융통성 있는
+evolve	:	[동] 진화하다, 서서히 발전하다
+refer to ~	:	[숙] ~을 가리키다, 언급하다
+in response to ~	:	[숙] ~에 대응하여, ~에 반응하여
+individual	:	[명] 개(개)인; [형] 개별적인, 개개의
+merely	:	[부] 그저, 단지
+phase	:	[명] 단계, 시기
+entire	:	[형] 전체의
+room	:	[명] 여지, 기회, 가능성; [명] 방, 공간
+emotional	:	[형] 감정적인
+behavioural	:	[형] 행동의
+pattern	:	[명] 패턴, 양식
+demand	:	[명] 요구; [동] 요구하다; [명] 수요
+biological	:	[형] 생물학적인
+view	:	[명] 시야, 광경; [명] 견해, 관점; [동] 보다
+adulthood	:	[명] 성인기
+independent	:	[형] (of) (~와) 무관한, 독립적인
+limit	:	[동] 제한하다, 한정하다; [명] 제한, 한계
+adjust to ~	:	[숙] ~에 적응하다
+alter	:	[동] 바꾸다, 변경하다
+go viral	:	[숙] (인터넷에서) 입소문이 나다, 빠르게 퍼지다
+household term	:	[숙] 흔히 쓰이는 말, 누구나 아는 말
+countless	:	[형] 무수한, 셀 수 없이 많은
+vulnerable	:	[형] 취약한, 연약한
+thereby	:	[부] 그렇게 함으로써
+buffer	:	[동] 보호하다, 완충하다
+digitization	:	[명] 디지털화
+massive	:	[형] 엄청난, 대규모의
+autonomously	:	[부] 자율적으로
+give rise to ~	:	[동] ~을 일으키다, 낳다
+infinite	:	[형] 무한한
+breakdown	:	[명] 고장, 붕괴
+interdependence	:	[명] 상호 의존
+breeding ground	:	[숙] 온상, 번식지
+bump	:	[동] (up against) ~와 부딪치다, 충돌하다
+vulnerability	:	[명] 취약성
+interconnectedness	:	[명] 상호 연결성
+hierarchy	:	[명] 위계, 계층 구조
+oversimplify	:	[동] 지나치게 단순화하다
+politics	:	[명] 정치, 정치학
+household	:	[명] 가정, 가구
+take place	:	[동] (행사 등이) 열리다, 개최되다
+strategy	:	[명] 전략
+separate	:	[형] 분리된, 별개의; [동] 분리하다, 나누다
+effect	:	[명] 영향, 효과
+no longer	:	[숙] 더 이상 ~않는
+enormously	:	[부] 엄청나게, 대단히
+compute	:	[동] 계산하다
+decrease	:	[동] 감소하다
+used toR	:	[동] ~하곤 했다
+instantly	:	[부] 즉시, 곧바로
+spread	:	[명] 확산; [동] 퍼지다, 확산하다
+infectious	:	[형] 전염성의, 감염성의
+prevention	:	[명] 예방
+breakthrough	:	[명] 돌파구, 획기적인 발전
+smallpox	:	[명] 천연두
+exposure	:	[명] 노출
+harmless	:	[형] 무해한
+
+[mg_h2 26.10_7: 26.10모 7]
+#고2 26.10모 단어를 쪼갠거
+life expectancy	:	[숙] 기대 수명
+rely on ~	:	[숙] ~에 의존하다
+vaccine	:	[명] 백신
+contribute	:	[동] 기여하다, 공헌하다
+burden	:	[명] 부담, 짐
+bacterial	:	[형] 세균의
+viral	:	[형] 바이러스(성)의; [형] 입소문의, 입소문으로 퍼지는
+elimination	:	[명] 제거, 근절
+cholera	:	[명] 콜레라
+hygiene	:	[명] 위생
+therapy	:	[명] 치료, 요법
+chronic	:	[형] 만성의
+enormous	:	[형] 막대한, 엄청난
+progress	:	[명] 진보, 발전; [동] 진보하다, 발전하다
+treatment	:	[명] 치료, 치료법
+deadly	:	[형] 치명적인
+laboratory	:	[명] 실험실
+reduction	:	[명] 감소, 축소
+lead to ~	:	[숙] ~으로 이어지다, ~을 초래하다
+management	:	[명] 관리
+measure	:	[명] (-s) 조치, 대책; [동] 측정하다
+reduce	:	[동] 줄이다; [동] 격하시키다
+disease	:	[명] 질병
+discovery	:	[명] 발견
+receive	:	[동] 받다, 수령하다
+battle	:	[명] 싸움, 전투
+average	:	[형] 평균의
+medicine	:	[명] 약; [명] 의학
+damage	:	[명] 피해, 손해; [동] 피해를 끼치다, 손상시키다
+embrace	:	[동] 받아들이다, 포용하다
+interface	:	[명] 인터페이스, 접점
+objectively	:	[부] 객관적으로
+observation	:	[명] 관찰
+shape	:	[동] 형성하다, 만들다; [명] 형태, 형상
+usability	:	[명] 사용 편의성, 사용성
+uncover	:	[동] 밝혀내다, 알아내다
+engage in ~	:	[숙] ~에 참여하다, 종사하다
+realistic	:	[형] 현실적인
+preference	:	[명] 선호(도)
+representative	:	[형] 대표하는, 대표적인
+subsequent	:	[형] 그 후의, 차후의
+revision	:	[명] 수정, 개정
+in order toR	:	[숙] ~하기 위해
+interaction	:	[명] 상호 작용
+incredibly	:	[부] 믿을 수 없을 정도로, 엄청나게
+participant	:	[명] 참가자, 참여자
+perform	:	[동] 수행하다, 공연하다
+improve	:	[동] 개선하다, 향상시키다
+base on	:	[동] ~에 근거하다
+finding	:	[명] 결과, 발견
+existing	:	[형] 현재 있는
+effective	:	[형] 효과적인
+technique	:	[명] 기술, 기법
+method	:	[명] 방법
+discover	:	[동] 발견하다
+opportunity	:	[명] 기회
+reappraisal	:	[명] 재평가, 재해석
+avenue	:	[명] 거리, 길; [명] 방법, 수단
+regulate	:	[동] 조절하다, 조정하다, 규제하다
+
+[mg_h2 26.10_8: 26.10모 8]
+#고2 26.10모 단어를 쪼갠거
+transform	:	[동] 변형시키다, 바꾸다
+illustrate	:	[동] 보여 주다, 설명하다; [동] 그리다, 삽화를 넣다
+accumulate	:	[동] 쌓이다, 축적하다
+resilience	:	[명] (힘든 상황으로부터의) 회복력, 탄력
+adverse	:	[형] 부정적인, 불리한
+divorce	:	[명] 이혼, [동] 이혼하다
+construe	:	[동] 해석하다
+alternatively	:	[부] 그 대신에, 다른 방법으로
+in the long run	:	[숙] 장기적으로 보면
+construal	:	[명] 해석, 이해 방식
+crucially	:	[부] 결정적으로, 매우 중요하게
+intense	:	[형] 강렬한, 극심한
+gratitude	:	[명] 감사
+consequence	:	[명] 결과, 영향
+psychological	:	[형] 심리적인
+particularly	:	[부] 특히
+take ~ for example	:	[동] ~을 예로 들다
+go through ~	:	[숙] ~을 겪다
+and yet	:	[숙] 그런데도, 그렇지만
+view A as B	:	[동] A를 B로 보다
+overpower	:	[동] 압도하다
+outcome	:	[명] 결과
+strength	:	[명] 강인함, 힘, 강점
+short-term	:	[형] 단기적인
+response	:	[명] 반응, 응답
+mark	:	[동] 흔적을 남기다, 표시하다; [명] 흔적, 표시; [명] 점수
+at one's root	:	[숙] 본질적으로
+root	:	[명] 근본, 뿌리; [동] 뿌리내리다, 뿌리박다
+repeat	:	[동] 반복하다
+loss	:	[명] 상실, 손실, 죽음
+painful	:	[형] 아픈, 고통스러운
+as a result of ~	:	[숙] ~의 결과로
+sadness	:	[명] 슬픔
+anger	:	[명] 분노
+utilize	:	[동] 활용하다, 이용하다
+one size fits all	:	[숙] 모두에게 맞는, 획일적인
+diverse	:	[형] 여러 가지의, 다양한
+criterion / criteria	:	[명] (당락, 분류의) 기준
+benchmark	:	[명] (비교를 위한) 기준점
+guideline	:	[명] 지침, 가이드라인
+inform A of B	:	[동] A에게 B를 알려 주다
+crop	:	[명] 작물, 농작물; [동] 잘라내다, 베어내다
+industrial	:	[형] 산업의
+boiler	:	[명] 보일러
+power plant	:	[숙] 발전소
+generator	:	[명] 발전기
+tap	:	[명] 수도꼭지
+dependent	:	[형] (on) ~에 달려 있는, ~에 의존하는
+quality	:	[명] 질, 품질; [명] 특성, 성질; [형] 질좋은
+physical	:	[형] 육체의; [형] 물리적인
+cool down	:	[숙] 식히다, 진정시키다
+a set of ~	:	[숙] 일련의, 한 벌의 ~
+against the grain	:	[숙] 일반적인 방식과 다르게
+at face value	:	[숙] 액면 그대로
+primary source	:	[숙] 1차 자료
+draw	:	[동] 끌어내다; [동] 그리다; [동] 비기다
+access	:	[명] 접근, 출입, 이용; [명] 접근하다, 이용하다, 접속하다
+substantial	:	[형] 상당한, 많은
+
+[mg_h2 26.10_9: 26.10모 9]
+#고2 26.10모 단어를 쪼갠거
+documentation	:	[명] 문서, 기록
+archive	:	[명] 기록 보관소, 자료실
+preserve	:	[동] 보존하다
+bias	:	[명] 편향, 편견
+textual	:	[형] 텍스트의, 문헌의
+official	:	[명] 관리, 간부 (직원); [형] 공식적인
+slaveowner	:	[명] 노예 소유주
+rumor	:	[명] 소문
+hint	:	[명] 암시, 단서
+enslave	:	[동] 노예로 만들다
+a variety of ~	:	[숙] 다양한 ~
+primary	:	[형] 주된, 주요한, 1차적인
+source	:	[명] 원천, 근원, 출처
+emphasize	:	[동] 강조하다
+ordinary	:	[형] 평범한, 보통의
+material	:	[명] 재료, 자료; [명] 물질, [형] 물질적인
+end up V-ing	:	[숙] 결국 ~하게 되다
+analyze	:	[동] 분석하다
+employer	:	[명] 고용주
+grain	:	[명] 곡물, 낟알
+examine	:	[동] 검사하다, 조사하다
+interruption	:	[명] 방해, 중단
+detail	:	[명] 세부 사항
+lack	:	[명] 결여, 부족; [동] ~가 결여되어 있다, 부족하다
+available	:	[형] 이용 가능한
+researcher	:	[명] 연구자
+historical	:	[형] 역사적인
+record	:	[동] (~을) 기록하다; [명] 기록
+creative	:	[형] 창의적인
+legal	:	[형] 법적인
+document	:	[명] 문서; [동] 기록하다
+provide A with B	:	[동] A에게 B를 제공하다
+silence	:	[명] 침묵; [동] 침묵시키다, 조용히 시키다
+offer	:	[동] 제공하다; [명] 제공, 제안
+specialized	:	[형] 전문화된, 특화된
+dedicated	:	[형] (to N/V-ing) ~에 전념하는, ~ 전용의
+echolocation	:	[명] 반향 위치 측정
+acoustic	:	[형] 음향의, 청각의
+pathway	:	[명] 경로, 통로
+transmit	:	[동] 전달하다, 전송하다
+auditory	:	[형] 귀의, 청각의
+cortex	:	[명] (대뇌) 피질
+mammal	:	[명] 포유동물, 포유류
+distinct	:	[형] 뚜렷이 다른, 별개의
+frequency	:	[명] 빈도, 주파수
+intensity	:	[명] 강도, 세기
+in parallel	:	[숙] 동시에, 병행하여
+assembly line	:	[숙] 조립 라인
+cognitive load	:	[숙] 인지 부하
+serially	:	[부] 연속적으로, 연속물로
+simultaneously	:	[부] 동시에
+sequentially	:	[부] 순차적으로
+disrupt	:	[동] 방해하다, 지장을 주다
+rapidly	:	[부] 빠르게
+responsible for ~	:	[형] ~에 책임이 있는; [형] ~의 원인이 되는; [형] ~을 관장하는
+aspect	:	[명] 일면, 측면
+specialization	:	[명] 전문화
+parallel	:	[명] 평행, 유사성; [형] 평행한, 유사한
+associate A with B	:	[동] A를 B와 연관시키다
+
+[mg_h2 26.10_10: 26.10모 10]
+#고2 26.10모 단어를 쪼갠거
+rapid	:	[형] 빠른, 신속한
+signal	:	[명] 신호
+timing	:	[명] 타이밍, 시기
+echo	:	[명] 메아리, 반향
+divide	:	[동] 나누다
+efficiently	:	[부] 효율적으로
+load	:	[명] 부담, 짐; [동] (짐을) 싣다
+react	:	[동] 반응하다
+boredom	:	[명] 지루함, 따분함
+despair	:	[명] 절망
+irritation	:	[명] 짜증, 화
+idle	:	[형] 한가한, 놀고 있는
+troubling	:	[형] 골치 아픈, 걱정스러운
+self-improvement	:	[명] 자기 계발
+reflection	:	[명] 숙고, 성찰; [명] 반사, 반영
+indulgence	:	[명] 탐닉, 방종
+pastime	:	[명] 취미, 소일거리
+luxury	:	[명] 사치, 호사
+perceive	:	[동] 인식하다, 여기다
+manifest	:	[동] 나타나다, 드러내다
+inactive	:	[형] 활동하지 않는, 비활동적인
+occasion	:	[명] 기회, 경우
+comprehend	:	[동] 이해하다; [동] 포괄하다
+hazardous	:	[형] 위험한
+paramount	:	[형] 가장 중요한
+profound	:	[형] 깊은, 심오한; [형] 상당한
+regard	:	[동] 여기다, 간주하다
+constructive	:	[형] 건설적인
+in disguise	:	[숙] 변장한, 위장한
+irony	:	[명] 아이러니, 역설
+crucial	:	[형] 결정적인, 매우 중요한
+recognize	:	[동] (사실 등을) 인정하다; [동] 알아보다, 인식하다
+depression	:	[명] 우울증, 우울감
+adequately	:	[부] 적절히, 충분히
+search	:	[명] 수색; [동] (A for B) (B 찾으려고 A를) 수색하다, 찾다
+arise	:	[동] 생기다, 발생하다
+workshop	:	[명] 작업장, 워크숍
+imply	:	[동] 암시하다
+reflect	:	[동] (on) 숙고하다; [동] 반사하다; [동] 반영하다
+in the presence of ~	:	[숙] ~ 앞에서, ~이 있는 데서
+appreciate	:	[동] ~의 진가를 알다; [동] 고마워하다; [동] 감상하다
+circumstance	:	[명] 상황, 환경
+represent	:	[동] 나타내다; [동] 대리하다, 대표하다
+observe	:	[동] 관찰하다; [동] 준수하다; [동] 말하다
+express	:	[동] 표현하다, 나타내다
+balance	:	[명] 균형; [동] 균형을 잡다
+waste	:	[명] 쓰레기, 폐기물; [동] 낭비하다
+identification	:	[명] 식별, 정체성 확인
+unavailable	:	[형] 이용할 수 없는
+unproductive	:	[형] 비생산적인
 
 
-[passage_CE2_L3: 3과 본문+FR]
-# 지문을 보며 단어의 뜻을 맞혀보자.
+
+[passage_E2_L3: 3과 본문]
+# 지문을 읽으며 그 속의 단어 뜻을 살펴보자.
+[[It appears that | it appears[seems] that ~]] viruses [[exist | exist]] [[solely | solely]] to bring [[suffering | suffering]] to [[humanity | humanity]].
+The 1918 [[influenza | influenza]] [[pandemic | pandemic]] is [[estimated | estimate]] to have killed 50 to 100 million people.
+[[Smallpox | smallpox]] [[claimed | claim]] the [[lives | life]] of a [[further | further]] 200 million people in the 20th century alone, [[according to | according to ~]] estimates.
+And of course, the recent COVID-19 [[pandemic | pandemic]] has taken several million [[lives | life]], [[affecting | affect]] almost every [[aspect | aspect]] of human [[life | life]] worldwide.
 ===
-*City [[Wellness | wellness]] Center Newsletter*
-This week’s topic in the City [[Wellness | wellness]] Center Newsletter is [[resilience | resilience]], or “the power to [[overcome | overcome]]”. 
-Julia Hone, a famous doctor, tells us how we can [[deal with | deal with ~]] difficult times by [[cultivating | cultivate]] our [[inner | inner]] [[strength | strength]].
-No life is [[free from | free from ~]] problems. 
-Whatever life path we choose, we all [[experience: [명] 경험; [동] 경험하다]] [[adversity | adversity]]. 
-This can [[take the form of | take the form of ~]] illness, accidents, [[failure | failure]] in exams, family and relationship [[issues | issue]], or other stresses. 
+[[Outbreaks | outbreak]] of [[viral | viral]] diseases are frequently [[linked to | link ~ to …]] contact with [[wild | wild]] animals such as bats.
+Such contacts [[allow | allow ~ toR]] new viruses [[to | allow ~ toR]] enter human bodies that have no [[prior | prior]] [[immunity | immunity]] to such viruses.
+[[Historically | historically]], [[natural | natural]] [[barriers | barrier]] such as mountains and forests [[prevented | prevent ~ from V-ing]] animal viruses [[from | prevent ~ from V-ing]] infecting humans.
+[[Industrialization | industrialization]] has [[destroyed | destroy]] these [[barriers | barrier]], and [[climate change | climate change]] has pushed some [[wild | wild]] animals out of their [[original | original]] [[habitats | habitat]].
 ===
-To cope, we all need the [[ability | ability]] to [[overcome | overcome]] difficulties, which is [[known as | known as ~]] [[resilience | resilience]]. 
-[[Resilience | resilience]] means [[springing back | spring back]], just like a [[bouncy | bouncy]] ball after hitting the ground. 
-If you are [[resilient | resilient]], you can [[bounce back | bounce back]] and [[recover: [동] 회복하다]] quickly from the hard times you [[experience: [명] 경험; [동] 경험하다]]. 
-[[Furthermore | furthermore]], you learn and grow from [[adversity | adversity]]. 
-So, [[resilience | resilience]] is the [[ability | ability]] to handle, recover from, and [[benefit from | benefit from]] difficult life events.
+These changes have [[resulted in | result in ~]] an [[increase | increase]] in [[interactions | interaction]] [[between | between A and B]] human [[and | between A and B]] wild animals, meaning more opportunities for the viruses [[present | present]] in [[wild | wild]] animals to spread to humans.
+This is the [[primary | primary]] reason for scientists’ [[concern | concern]] that [[pandemics | pandemic]] may [[increase | increase]] in the future.
+Then, is the virus truly a [[harmful | harmful]] presence to humans?
+[[Not necessarily | not necessarily]].
 ===
-There are [[countless | countless]] stories of successful people who not only [[survived | survive]] [[adversity | adversity]] but used it as [[a stepping stone to | a stepping stone to ~]] [[growth | growth]]. 
-[[Fairy tale | fairy tale]] writer Hans Andersen said that his childhood [[poverty | poverty]], the early [[loss | loss]] of his father, and his [[experience: [명] 경험; [동] 경험하다]] of being [[disrespected | disrespect]] were the [[sources | source]] for his most popular stories. 
-“The hardship was a real [[blessing | blessing]] that [[inspired | inspire]] me to write stories like The Little Match Girl, The Snow Queen, and The Ugly [[Duckling | duckling]].” 
+*Keepers of the Earth*
+What is less commonly known is that viruses [[play | play a(n) ~ role in …]] crucial [[roles in | play a(n) ~ role in …]] [[supporting | support]] much of [[life | life]] on Earth.
+This is because [[researchers | researcher]] have only recently begun [[investigating | investigate]] the viruses that [[sustain | sustain]] us and [[the planet | the planet]], [[instead of | instead of ~]] just those that [[harm | harm]] us.
+Therefore, scientists have much more to learn about viruses than they currently know.
+What they do know is that viruses [[act as | act as ~]] the [[primary | primary]] [[regulators | regulator]] of [[bacterial | bacterial]] and insect [[populations | population]].
 ===
-[[Athlete | athlete]] Aimee Mullins also saw her [[challenges | challenge]] as an [[opportunity | opportunity]]. 
-She was born with a [[medical condition | medical condition]] that [[resulted in | result in ~]] losing both legs [[beneath | beneath]] the knee to [[surgery | surgery]]. 
-She [[competed against | compete against ~]] [[athletes | athlete]] without [[disabilities | disability]] in a [[national | national]] competition and [[participated in | participate in ~]] the Paralympics in 1996. 
-Her career also includes modeling, acting, and [[public speaking | public speaking]]. 
-She says her [[physical | physical]] [[condition | condition]] is not a [[disability | disability]] but the very thing that opened the door for her amazing [[potential | potential]]. 
-Both people succeeded not “despite” [[adversity | adversity]] but thanks to it. 
-This is the real [[bouncing back | bounce back]].
+Since viruses do not have [[reproductive | reproductive]] [[functions | function]] [[on their own | on one’s own]], they steal the [[reproductive | reproductive]] [[functions | function]] of other [[organisms | organism]] to [[multiply | multiply]].
+Some types of viruses use bacteria.
+When the virus [[continues | continue]] to [[multiply | multiply]] inside the bacteria, the bacteria [[eventually | eventually]] die, and the newly [[produced | produce]] viruses [[go on to | go on toR]] infect other bacteria.
+This [[whole | whole]] process helps viruses [[control | control]] the [[excessive | excessive]] [[growth | growth]] of [[certain | certain]] bacteria.
 ===
-You might think “Hey, these are [[exceptional | exceptional]] people.” 
-However, we are all born with the [[potential | potential]] for [[resilience | resilience]]. 
-Just like these people, we all can develop the [[strength | strength]] to quickly recover from a [[crisis | crisis]] that could [[otherwise | otherwise]] cause [[lasting | lasting]] damage to our mental health. 
-The good news is that [[resilience | resilience]] is like a [[muscle | muscle]]. 
-You can [[build | build ~ up]] it [[up | build ~ up]] through practice, by developing [[thoughts | thought]], [[behaviors | behavior]], and habits that [[allow | allow]] you to recover from [[painful | painful]] or stressful events. 
-Here are three [[basic | basic]] [[strategies | strategy]] to [[build up | build ~ up]] this “[[resilience | resilience]] [[muscle | muscle]].”
+The greater [[significance | significance]] of viruses [[infecting | infect]] bacteria is that they [[play | play a(n) ~ role in …]] a vital [[role in | play a(n) ~ role in …]] [[supplying | supply ~ to …]] oxygen [[to | supply ~ to …]] our planet.
+About half of the [[oxygen | oxygen]] on Earth is [[produced | produce]] by plankton in the [[oceans | ocean: [명] 바다, 대양]], and the [[primary | primary]] food [[source | source]] for these plankton is [[nutrients | nutrient]] [[released | release]] from bacteria killed by [[viral | viral]] [[infections | infection]].
+If viruses did not [[infect | infect]] and kill bacteria, there would be no [[bacterial | bacterial]] [[remains | remains]], [[leading to | lead to ~]] a [[lack | lack]] of plankton.
+Without plankton, half of Earth’s [[oxygen | oxygen]] would [[disappear | disappear]].
+In short, without viruses, the [[lack | lack]] of [[oxygen | oxygen]] would make it impossible for humans to [[survive | survive]].
 ===
-*Three [[Basic | basic]] [[Strategies | strategy]] to [[Build Up | build ~ up]] Your “[[Resilience | resilience]] [[Muscle | muscle]]”*
-First, [[accept | accept]] and [[respect | respect]] [[adversity | adversity]] as a natural part of life. 
-This doesn’t mean being [[passive | passive]], but understanding that some changes in life can cause [[suffering | suffering]] or stress. 
-Then, instead of feeling [[singled out | single ~ out]] and thinking, “Why me?”, you can [[face | face]] whatever happens and [[focus on | focus on ~]] what you can change, not what you can’t. 
-[[Embracing | embrace]] [[challenges | challenge]] and [[unexpected | unexpected]] [[obstacles | obstacle]] in your life can help you confront them as a learning process. 
-[[Think of | think of ~]] all the success stories that could never have happened without [[adversity | adversity]]!
+Insect [[species | species / species]] [[populations | population]] are also [[regulated | regulate]] by viruses.
+When a specific type of insect increases [[excessively | excessively]], the viruses that [[infect | infect]] those insects also [[increase | increase]], [[reducing | reduce]] their numbers.
+This, [[in turn | in turn]], creates [[room | room]] for other types of insects to [[flourish | flourish]].
+[[Considering | considering ~]] the [[chain | chain]] of food in nature, it would not be difficult to [[assume | assume]] that viruses [[fulfill | fulfill]] important [[functions | function]] in [[regulating | regulate]] other [[species | species / species]].
+We have just started to understand their various roles in the [[ecosystem | ecosystem]].
 ===
-Second, have “me time,” [[that is | that is (to say)]], [[personal | personal]] time to [[look after | look after ~]] yourself. 
-Take a break and be in the [[present | present]] [[moment | moment]], [[neither | neither A nor B: [접] A나 B 둘 다 아닌]] [[regretting | regret]] the past [[nor | neither A nor B: [접] A나 B 둘 다 아닌]] worrying about the future. 
-Walk, [[meditate | meditate]], write, [[draw | draw]], listen to music, or exercise. 
-If you don’t know where to start, the STOP technique can be a great meditative technique. 
-It [[works | work]] like this.
-Stop whatever you are doing.
-[[Take a few deep breaths | take a deep breath]].
-[[Observe | observe]] your emotions and [[thoughts | thought]] as they are, not [[judging | judge]] them as good or bad.
-[[Proceed with | proceed with ~]] what you were doing. 
-Or start something different [[based on | based on ~]] what you [[observed | observe]]. 
-Now [[go forward with | go forward with ~]] your life.
+*Helpers of Evolution*
+Another less [[recognized | recognized]] role of viruses is their [[contribution | contribution]] to the [[evolution | evolution]] of [[life | life]] on Earth.
+When a virus [[infects | infect]] a [[reproductive | reproductive]] [[cell | cell]] of its [[host | host]], such as an [[egg | egg]] or [[sperm | sperm]], the viral DNA may be [[passed down to | pass ~ down to …]] the [[host’s | host]] [[offspring | offspring]].
+The [[insertion | insertion]] of new DNA into [[genomes | genome]] is a significant [[mechanism | mechanism]] of [[evolution | evolution]].
+Without viruses, in other words, the evolutionary [[potential | potential]] for all [[life | life]] on [[the planet | the planet]] would be impacted.
+One example of viruses’ [[contributions | contribution]] to [[evolution | evolution]] is their role in the [[development | development]] of the [[placenta | placenta]] in [[mammals | mammal]].
 ===
-Third, be [[connected | connect]]. [[Allow | allow]] yourself to ask for help from people whom you can [[trust | trust]], such as friends, family members, or [[counselors | counselor]]. 
-Talking about your [[issues | issue]] with someone can help you see your situation with more [[clarity | clarity]] and [[respond to | respond to ~]] it with more [[strength | strength]]. 
-Good communication helps [[resilience | resilience]]. 
-This is the reason why [[resilient | resilient]] people [[tend to | tend toR]] create good [[support | support]] networks.
+A [[placenta | placenta]] is a [[complex | complex]] [[organ | organ]] that helps the [[fetus | fetus]] grow securely inside its mother’s body.
+It [[facilitates | facilitate]] the [[exchange | exchange]] of [[oxygen | oxygen]], [[nutrients | nutrient]], and [[waste products | waste product]] while [[protecting | protect ~ from …]] the fetus [[from | protect ~ from …]] the mother’s [[immune | immune]] system.
+In the early days of [[evolution | evolution]], [[female | female]] animals had to [[leave | leave]] their [[offspring | offspring]] in one [[location | location]], like [[eggs | egg]] in a nest, making them [[vulnerable | vulnerable]] to [[predators | predator]].
+After the [[emergence | emergence]] of the [[placenta | placenta]], [[females | female]] were able to carry their [[young | young]] inside their bodies safely from one [[location | location]] to another.
+Viruses that [[infected | infect]] our [[remote | remote]] [[ancestors | ancestor]] more than 130 million years ago have been [[reported | report]] to have [[served | serve]] a key [[function | function]] in the [[development | development]] of this vital [[organ | organ]].
 ===
-I am not saying that these [[strategies | strategy]] are easy or [[remove | remove]] all stress and [[suffering | suffering]]. Still, I [[urge | urge]] you to practice them whenever you can, [[particularly | particularly]] when you are under stress. 
-Remember that there is no better time to build your “[[resilience | resilience]] [[muscle | muscle]]” than the [[moment | moment]] when you are [[in the middle of | in the middle of ~]] [[adversity | adversity]] and [[uncertainty | uncertainty]]. 
-racticing [[resilience | resilience]] during [[tough | tough]] times helps you [[endure | endure]] and grow stronger. 
-However, you can also [[apply | apply A to B]] these strategies [[to | apply A to B]] everyday small stresses or [[minor | minor]] [[challenges | challenge]]. 
-Then you will [[gradually | gradually]] become more able to [[deal with | deal with ~]] big ones.
-[[Resilient | resilient]] people [[tend to | tend toR]] be happier and more [[fulfilled | fulfilled]] because they are less afraid of failing or [[challenges | challenge]]. 
-So, building [[resilience | resilience]] is [[the key | a key to ~]] not only [[to | a key to ~]] [[overcoming | overcome]] [[adversity | adversity]] but also [[to | a key to ~]] living a happy life.
------
-=== FR ===
-Our mindset, or way of thinking, affects our [[ability | ability]] to [[deal with | deal with ~]] life’s [[challenges | challenge]]. 
-Psychologists say there are two main mindsets: “fixed” and “[[growth | growth]].”
-For people with a fixed mindset, [[failure | failure]] just shows that their intelligence, [[abilities | ability]], and talents are limited. 
-They may think, for example, “I’ve never been good at writing. I’ll never be a good writer.” 
-Therefore, they stay in their comfort zone, where they won’t be [[challenged | challenge]]. 
-They [[tend to | tend toR]] reject even constructive [[criticism:[명] 비판]]. 
-Also, other people’s success makes them feel defeated and lose confidence.
-Meanwhile, people with a [[growth | growth]] mindset [[accept | accept]] life’s [[challenges | challenge]]. 
-For them, [[failure | failure]] is an [[opportunity | opportunity]]. 
-They may think,[[for example: [부] 예를 들어]], “I can still learn and practice writing skills until I can write a great story”. 
-They can learn from [[criticism:[명] 비판]], ask for advice, and be [[inspired | inspire]] by other people’s success. 
-A [[growth | growth]] mindset [[empowers | empower: [동] 힘을 주다, 권한을 주다]] people to feel more [[comfortable: [형] 편안한]] about their [[imperfections | imperfection:[명] 불완전성, 결점]] and [[overcome | overcome]] [[crises | crisis]] or mistakes more easily.
-Experts say that we can develop a [[growth | growth]] mindset through practice. 
-Whenever you feel “It’s impossible, I’[[d rather | would rather: 차라리 ~하겠다]] give up,” why don’t you train yourself to say, “I still want to try, I can learn how to make it possible”?
+*Means for Cures*
+As [[scientific | scientific: [형] 과학적인, 과학의]] knowledge about viruses [[continues | continue]] to [[expand | expand]], new opportunities for [[utilizing | utilize]] them in the battle against diseases are [[arising | arise]].
+Of [[notable | notable]] [[interest | interest]] are the areas of [[gene | gene]] [[therapy | therapy]] and [[cancer | cancer]] treatment.
+[[Genes | gene]] can be [[compared to | compare ~ to …]] [[instruction | instruction]] [[guides | guide]] that [[govern | govern]] how our bodies [[function | function]].
+Sometimes, people are born with [[genetic | genetic]] [[disorders | disorder]], which can [[lead to | lead to ~]] health problems.
+[[Gene | gene]] [[therapy | therapy]] [[steps in | step in]] to [[fix | fix]] these issues.
+The [[essence | essence]] of [[gene | gene]] [[therapy | therapy]] [[lies | lie (- lay - lain)]] in [[delivering | deliver ~ to …]] corrected genetic instructions [[to | deliver ~ to …]] a [[patient’s | patient]] [[cells | cell]], [[enabling them to function | enable ~ toR]] properly.
+===
+In this process, specially [[modified | modify]] viruses are used as one of the [[carriers | carrier]] of the [[genetic | genetic]] [[instructions | instruction]].
+If the [[patient’s | patient]] [[cells | cell]] [[function | function]] properly, it can potentially help the body [[fight off | fight ~ off]] [[certain | certain]] diseases.
+Using viruses to treat [[cancer | cancer]], another use of viruses, is [[based on | based on[upon] ~]] the [[notion | notion]] of [[utilizing | utilize]] their natural ability to [[infect | infect]] and kill [[cells | cell]].
+If successful, viruses can be [[manipulated | manipulate]] to [[specifically | specifically]] [[target | target]] and [[destroy | destroy]] [[cancer | cancer]] [[cells | cell]] while leaving healthy [[cells | cell]] [[unharmed | unharmed]].
+The use of viruses in [[gene | gene]] [[therapy | therapy]] and [[cancer | cancer]] treatment is [[still | still]] in the early [[stages | stage]].
+However, many [[researchers | researcher]] are [[involved in | involve ~ in …]] hundreds of projects with the goal of [[discovering | discover]] [[cures | cure]] for diseases that were once thought to be [[incurable | incurable]].
+===
+We have yet to [[find out | find ~ out]] how many virus types even [[exist | exist]], [[let alone | let alone]] the [[characteristics | characteristic]] of each of them.
+The more we learn about viruses, however, the better [[equipped | equip ~ toR]] we will be to use [[certain | certain]] viruses for [[beneficial | beneficial]] [[purposes | purpose]] and to develop [[defenses | defense]] against viruses that could [[lead to | lead to ~]] the next [[pandemic | pandemic]].
+More than that, learning more about [[viral | viral]] [[diversity | diversity]] will help us [[reach | reach]] a deeper understanding of the [[working | working]] of our planet, [[ecosystems | ecosystem]], and our own bodies.
 
 
-
-[passage_mogo_h1_26.10_1: 모고 지문 1 (20~29)]
-# 지문을 보며 단어의 뜻을 맞혀보자.
+[passage_mg_h2_26.10_1: 모고 지문 1 (20~29)]
+# 지문을 읽으며 그 속의 단어 뜻을 살펴보자.
 === 20번 ===
-We might not [[think of | think of ~ as ...]] ourselves [[as | think of ~ as ...]] [[global citizens | global citizen]] yet, but it's both [[necessary | necessary]] and possible to do so.
-Some [[people | people]] are [[skeptical | skeptical]] about the idea of [[global | global]] [[citizenship | citizenship]], but for most of human history, [[people | people]] didn't [[think of | think of ~ as ...]] themselves [[as | think of ~ as ...]] [[citizens | citizen]] of [[nation-states | nation-state]].
-[[After all | after all]], for most of human history, [[nation-states | nation-state]] didn't [[exist | exist]].
-The [[rise | rise]] of [[nation-states | nation-state]] over the last few [[centuries | century]] has led [[people | people]] to add state [[citizenship | citizenship]] to other identities, [[such as | such as]] family, [[people | people]] group, or [[religion | religion]].
-[[Given | given ~]] the [[connections | connection]] between [[people | people]] around the world and the common [[challenges | challenge]] we [[face | face]], we need to [[layer | layer]] [[global | global]] [[citizenship | citizenship]] on to these other identities.
-This doesn't mean that [[global | global]] [[citizenship | citizenship]] [[replaces | replace]] these other identities.
-There's not a single story about our identities.
-[[Instead | instead]], it's [[precisely | precisely]] because we have [[obligations | obligation]] to our families, those in our [[community | community]], and those around the world.
+[[Life | life]] is full of [[possibilities | possibility]].
+If we, like gardeners, provide a [[suitable | suitable]] [[environment | environment]] and let children [[grow | growth]] [[at their own pace | at one's own pace]], they will [[spontaneously | spontaneously]] [[explore | explore]] the world, developing [[curiosity | curiosity]], [[creativity | creativity]], and [[independence | independence]].
+Such children love [[life | life]], [[dare to | dare toR]] [[challenge | challenge]], and [[possess | possess]] [[initiative | initiative]].
+But if we, like carpenters, always try to "shape" children into our ideal image, they will [[gradually | gradually]] lose [[autonomy | autonomy]], becoming [[accustomed to | accustomed to ~]] following others' [[instructions | instruction]].
+Such children quickly lose their sense of direction as they [[grow | growth]], because they are used to being arranged for, [[rather than | rather than ~]] [[actively | actively]] choosing their path.
+As parents, our role should be that of gardeners, providing sunlight, rain, and [[fertile | fertile]] [[soil | soil]], allowing children to [[grow | growth]] [[naturally | naturally]] [[at their own pace | at one's own pace]].
+It should not be that of carpenters, trying to [[carve | carve]] out a "perfect" piece [[according to | according to ~]] our [[will | will]].
+The [[core | core]] of education starts with understanding [[life | life]] and helping children find their own "map" to find their direction in a [[complex | complex]] world.
 
 === 21번 ===
-Among [[unsatisfied | unsatisfied]] [[professionals | professional]], there's a repeating [[theme | theme]] ─ the [[belief | belief]] that someday (a [[mysterious | mysterious]] day in the future) things will [[miraculously | miraculously]] change and they'll [[stumble into | stumble into ~]] the perfect job or [[career | career]].
-[[At the same time | at the same time]], they ([[typically | typically]]) do little to [[meaningfully | meaningfully]] [[alter | alter]] their [[current | current]] [[situation | situation]].
-They don't like their job, so what do they do?
-They [[head to | head to ~]] [[job boards | job board]] and search for [[roles | role]] with a [[similar | similar (to ~)]] job title, hoping that the [[universe | universe]] will [[sprinkle | sprinkle]] a bit of magic on their [[career | career]] if they just [[hit the refresh button | hit the refresh button]] in a different [[department | department]] or company.
-[[Efforts | effort]] like this make [[professionals | professional]] feel like they are doing something, when really they're just [[setting themselves up | set oneself up]] to take a new [[role | role]] and quickly become just as [[disenchanted | disenchanted]] as they were before.
-It's like [[rearranging | rearrange]] deck chairs on the Titanic.
-You've got to completely switch up your [[approach | approach]].
-If you keep playing the same game, you'll win the same [[prizes | prize]].
+To see how borrowing and lending changes a person's [[worldview | worldview]], [[consider | consider]] what the [[rate of interest | rate of interest]] does to people's [[perception | perception]] of time.
+[[Imagine | imagine]] you are lending to somebody at an [[interest | interest]] [[rate | rate]] of 10 percent per year for five years.
+This [[rate | rate]] tells us that the money lent has a cost that reflects the risk of you not being repaid and the [[opportunity cost | opportunity cost]] of not spending that money yourself.
+The longer the [[term | term]] of the [[loan | loan]], the higher the [[chance | chance]] you won't be paid back because it is [[further | further]] into the future ― which [[by definition | by definition]] is [[unknowable | unknowable]] ― and the longer you will have to wait before spending the money yourself.
+In order to make this [[worthwhile | worthwhile]] for the lender, money has to have a price ― a cost to the borrower and [[income | income]] to the lender.
+This price [[factors in | factor]] the [[value | value]] of time.
+[[To put it another way | to put it another way]], a bird in the hand is worth two in the bush.
 
 === 22번 ===
-[[Sociologists | sociologist]] [[argue | argue]] that our [[perception | perception]] and [[usage | usage]] of time are not just basic [[properties | property]] of [[nature | nature]], like a clock [[ticking away | tick away]] in the background, nor are they simply [[psychological | psychological]] [[phenomena | phenomenon / phenomena]] of [[individual | individual]] [[experience | experience]].
-[[Instead | instead]], how we [[perceive | perceive]] and understand time is [[to a large degree | to a large degree]] [[shaped | shape]] by [[tradition | tradition]] and cultural [[norms | norm]].
-Eviatar Zerubavel's work, The Seven Day Circle: The History and Meaning of the Week, [[demonstrates | demonstrate]] how the week, a [[fundamental | fundamental]] [[unit | unit]] of time, is a social [[invention | invention]] that [[varies | vary]] across cultures, [[influencing | influence]] how [[people | people]] [[structure | structure]] their activities and [[rhythms | rhythm]] of life.
-Why do we consider a [[nine-to-five | nine-to-five]] job [[routine | routine]]?
-Why don't many of us work on the weekends?
-Why do we usually pay our bills at the end of the month?
-Why is the [[retirement | retirement]] age sixty-five?
-These numbers and [[patterns | pattern]] aren't really [[dictated | dictate]] by [[nature | nature]] or any [[essential | essential]] human [[characteristic | characteristic]], but are rather social [[creations | creation]] that we [[internalize | internalize]] and [[come to | come toR]] [[accept | accept]] as "normal."
+Social and environmental [[responsibility | responsibility]] has become an [[increasingly | increasingly]] important [[ethical | ethical]] [[consideration | consideration]] for [[content | content]] creators.
+As global [[awareness | awareness]] of social, environmental, and [[sustainability | sustainability]] issues grows, many [[content | content]] creators are being [[called upon to | called upon toR]] [[consider | consider]] the broader [[impact | impact]] of their work.
+This [[includes | include]] [[addressing | address]] topics such as [[climate change | climate change]], social [[justice | justice]], and [[ethical | ethical]] [[consumerism | consumerism]] in their [[content | content]].
+[[Content | content]] creators have a [[platform | platform]] that can [[influence | influence]] their audience's [[attitudes | attitude]] and [[behaviors | behavior / behaviour]], and they have a [[responsibility | responsibility]] to use that [[platform | platform]] for positive change.
+For example, [[promoting | promote]] environmentally [[sustainable | sustainable]] products or supporting [[causes | cause]] [[related to | related to ~]] [[equality | equality]] and [[justice | justice]] can help [[raise | raise]] [[awareness | awareness]] and [[drive | drive]] [[meaningful | meaningful]] social [[impact | impact]].
+[[Ethical | ethical]] [[content | content]] creators not only [[focus on | focus on ~]] [[promoting | promote]] their products or services [[but also | not only ~ but also]] [[consider | consider]] the values and [[causes | cause]] they [[support | support]], [[ensuring | ensure]] that their [[content | content]] aligns with their social and environmental principles.
 
 === 23번 ===
-In recent years, the number of [[illegal | illegal]] actions in particular at the [[corporate | corporate]] level has grown, or at least the number of cases that [[came to light | come to light]], increased.
-Such [[misconduct | misconduct]] has often only been [[exposed | expose]] because brave [[informants | informant]] have [[risked | risk]] a great deal in order to [[put an end to | put an end to]] it.
-[[Hence | hence]], it is no surprise that [[whistleblower | whistleblower]] [[protection | protection]] has [[come into focus | come into focus]].
-If [[violations | violation]] of [[law and order | law and order]] go [[undetected | undetected]] and [[unpunished | unpunished]] for years because employees of a company fear to report [[illegal | illegal]] activities [[for fear of | for fear of ~]] [[reprisals | reprisal]] or [[consequences | consequence]], it can have several negative effects.
-It can [[harm | harm]] the company itself, but also [[third-parties | third-party]], the economy in [[general | general]], the [[general | general]] public, and even [[the rule of law | the rule of law]] could be [[affected | affect]].
-Protecting those who would [[assist | assist]] in [[reducing | reduce]] [[unlawful | unlawful]] or even [[criminal | criminal]] [[behaviour | behavior / behaviour]] has two main functions:
-Protecting the [[individual's | individual]] actions as well as protecting the [[public good | public good]].
-A [[well-balanced | well-balanced]] [[whistleblower | whistleblower]] [[protection | protection]] may have [[positive | positive]] effects on both of these.
+Research on [[cephalopod | cephalopod]] [[neurobiology | neurobiology]] [[suggests | suggest]] that an octopus [[possesses | possess]] [[roughly | roughly]] five hundred million [[neurons | neuron]].
+What makes this system [[unusual | unusual]] is where many of those [[neurons | neuron]] are [[located | locate]].
+More than half are [[distributed | distribute]] throughout the arms [[rather than | rather than ~]] concentrated [[entirely | entirely]] in the central brain.
+Each arm contains networks of [[nerve | nerve]] cells [[capable of | capable]] controlling [[complex | complex]] movements and [[responding to | respond to ~]] [[sensory | sensory]] input [[locally | locally]].
+This means that many actions do not require [[detailed | detailed]] [[instructions | instruction]] from the brain itself.
+Instead, the arms [[function | function]] as highly [[capable | capable]] extensions of the [[nervous system | nervous system]] that [[interact | interact]] with the [[environment | environment]] directly.
+The [[suckers | sucker]] [[lining | line]] each arm play an important role in this [[process | process]].
+These [[structures | structure]] provide strong [[grip | grip]] but also [[detect | detect]] [[chemical | chemical]] signals on surfaces they contact.
+[[Marine | marine]] biologists studying octopus [[behavior | behavior / behaviour]] have shown that this allows the animal to gather [[chemical | chemical]] information through touch.
+In [[practical | practical]] terms, an octopus can [[effectively | effectively]] taste what it touches.
 
 === 24번 ===
-Unfortunately, sometimes the idea of a goal is [[disconnected | disconnected]] from the daily [[reality | reality]] of what it will take to [[achieve | achieve]] it.
-We [[fall in love with | fall in love with ~]] the idea of a goal, [[pushing out of mind | push out of mind]] how different our [[day-to-day | day-to-day]] will need to be for us to make it [[happen | happen]].
-In fact, [[research | research]] even [[suggests | suggest]] that [[positive | positive]] [[fantasies | fantasy]] about our future can [[lead | lead to ~]] us to [[put | put effort into ~]] less [[effort into | put effort into ~]] our goals because our [[fantasies | fantasy]] [[provide | provide]] us with a [[false | false]] and [[premature | premature]] [[sense of accomplishment | sense of accomplishment]].
-We [[romanticize | romanticize]] a goal ─ [[falling in love with | fall in love with ~]] the idea of a change.
-In the [[process | process]], we [[gloss over | gloss over]] the [[intricacies | intricacy]] and [[challenges | challenge]] of [[integrating | integrate]] a [[complex | complex]] new [[behavior | behavior / behaviour]] into our life.
-As one study nicely [[summed it up | sum up]], [[fantasizing | fantasize]] about a [[positive | positive]] future "[[seduces | seduce]] a person to [[mentally | mentally]] enjoy the desired future in the here and now" ─ and because we don't [[reflect | reflect]] on why our [[fantasy | fantasy]] is not yet our future, "a [[necessity | necessity]] to act is not [[induced | induce]]."
-
-=== 26번 ===
-Douglas Carl Engelbart was an American [[engineer | engineer]] and inventor who transformed the field of human-computer interaction.
-He was born in Portland, Oregon, in 1925 to a European immigrant family.
-During World War II, he served as a radar technician in the U.S. Navy in the Philippines.
-It was during this time that he read an article that influenced his vision of using computers to enhance human [[abilities | ability]] and solve [[complex | complex]] problems.
-After serving, he earned master's and doctoral degrees in electrical engineering from the University of California, Berkeley, where he focused on computer-related [[research | research]].
-In the 1968 Fall Joint Computer Conference held in San Francisco, he [[demonstrated | demonstrate]] his technologies including the computer mouse, which became a monumental event in computer history.
-For his contributions to computer science, he received the Turing Award in 1997 and the [[National | national]] Medal of [[Technology | technology]] three years later.
+[[Consistent | consistent]] though he may be, some of Aristotle's ideas meet us today as strange.
+He had no [[difficulty | have no difficulty (in) V-ing]] [[justifying | justify]] [[slavery | slavery]], for example, and in his [[era | era]], philosophers enjoyed positions of high [[privilege | privilege]] and [[influence | influence]].
+Because of their [[practice | practice]] of [[contemplation | contemplation]] for the highest human good, philosophers were considered [[worthy | worthy]] to have all the best things in [[life | life]].
+[[Somehow | somehow]] that [[assertion | assertion]] seems [[oddly | oddly]] [[self-serving | self-serving]].
+It [[serves | serve]] us to remember that every great [[thinker | thinker]] is of her own time and speaks to a [[particular | particular]] [[audience | audience]], and certainly Aristotle is no [[exception | exception]].
+Human flourishing as he understood it probably would not be [[nearly | nearly]] as [[inclusive | inclusive]] as we would want it to be today.
+How he understood right and good is best taken to be an [[indicator | indicator]] of how the privileged [[elite | elite]] of ancient Greek [[society | society]] [[tended to | tend toR]] understand right and good.
+[[As a result | as a result]], [[for all | for all]] it does well, it is also deeply [[flawed | flawed]].
 
 === 29번 ===
-Since hydra and the [[immortal | immortal]] [[jellyfish | jellyfish]] don't [[exhibit | exhibit]] [[obvious | obvious]] signs of [[aging | aging]], they are often called [[biologically | biologically]] [[immortal | immortal]].
-This doesn't mean they don't die.
-Nor does it even mean that they cannot [[die of | die of ~]] [[biological | biological]] causes.
-But, unlike most every animal, their [[likelihood | likelihood]] of dying does not [[increase | increase]] with age.
-[[Species | species / species]] [[such as | such as]] hydra and the [[immortal | immortal]] [[jellyfish | jellyfish]] [[excite | excite]] [[gerontologists | gerontologist]] because they may [[provide | provide]] [[clues | clue]] about how to [[defeat | defeat]] the [[aging | aging]] [[process | process]].
-But their [[property | property]] of being able to [[regenerate | regenerate]] [[entire | entire]] body parts, or even a whole [[organism | organism]], makes them more [[similar | similar (to ~)]] to trees than to us.
-Although we may learn some [[fascinating | fascinating]] things about their [[lack | lack]] of [[apparent | apparent]] [[aging | aging]], it is [[not at all | not at all]] clear how [[relevant | relevant]] those [[findings | finding]] will be to human [[aging | aging]].
-Sometimes biology is [[universal | universal]], especially if it [[relates to | relate to ~]] [[fundamental | fundamental]] [[mechanisms | mechanism]].
-But in other cases, even discoveries in rats or mice, which are [[mammals | mammal]] and [[biologically | biologically]] much closer to us, are difficult to [[translate | translate]] into humans.
-It may be a very long time before any [[findings | finding]] [[gained | gain]] from hydra or [[jellyfish | jellyfish]] are useful to us.
+You might think of [[survival | survival]] as a race in which a [[hurdle | hurdle]] has to be jumped every year.
+The early hurdles were once very high, and many people fell before [[clearing | clear]] the first few.
+[[Demographically | demographically]], [[humankind | humankind]] was living close to a [[state of nature | state of nature]], and nature is extremely [[wasteful | wasteful]] of [[life | life]].
+From only a very small number of [[figs | fig]] will even one of many [[seeds | seed]] become a [[fig | fig]] tree.
+Almost a [[quarter | quarter]] of baboons born in the [[wild | wild]] die before they are a year old, which is [[fairly | fairly]] [[typical | typical]] for [[primates | primate]].
+[[Infant | infant]] [[mortality | mortality]] rates for humans in [[pre-modern | pre-modern]] [[agricultural | agricultural]] societies were similar to, and sometimes higher, than those of apes.
+Things were little better for our [[hunter-gatherer | hunter-gatherer]] [[ancestors | ancestor]], a [[quarter | quarter]] of whom failed to [[reach | reach]] their first birthday, while another [[quarter | quarter]] didn't live long enough to [[reproduce | reproduce]] just about everywhere until the nineteenth century.
+[[Had it been otherwise | had it been otherwise]], the huge [[recent | recent]] [[growth | growth]] in human [[population | population]] would have [[occurred | occur]] much earlier.
 
 
-[passage_mogo_h1_26.10_2: 모고 지문 2 (30~35)]
-# 지문을 보며 단어의 뜻을 맞혀보자.
+[passage_mg_h2_26.10_2: 모고 지문 2 (30~35)]
+# 지문을 읽으며 그 속의 단어 뜻을 살펴보자.
 === 30번 ===
-[[Subsidies | subsidy]], taxes, and [[regulations | regulation]] can all [[lead to | lead to ~]] [[power plants | power plant]] that [[pollute | pollute]] less by switching away from [[coal | coal]].
-In all cases, [[profits | profit]] can be higher from making the [[transition | transition]], even [[taking | take ~ into account]] the related costs [[into account | take ~ into account]].
-The [[power plants | power plant]] [[prefer | prefer ~ over ...]] [[subsidies | subsidy]] [[over | prefer ~ over ...]] [[regulations | regulation]] or taxes.
-The reason is [[obvious | obvious]].
-They prefer to [[receive | receive]] money from the government rather than pay the costs themselves.
-But the "[[expansion | expansion]]" of their [[opportunity set | opportunity set]] through [[subsidies | subsidy]] has to be [[matched | match]] by the [[contraction | contraction]] of the [[opportunity set | opportunity set]] of others.
-The [[electricity | electricity]] companies' "[[freedom | freedom]]" is [[increased | increase]] [[at the expense of | at the expense of ~]] the [[ordinary | ordinary]] [[individual | individual]], who must [[suffer from | suffer from ~]] increased [[taxation | taxation]] to [[pay for | pay for ~]] the [[subsidy | subsidy]].
-[[Moreover | moreover]], from the [[perspective | perspective]] of pure [[efficiency | efficiency]], the [[subsidy | subsidy]] [[distorts | distort]] the economy because the [[electricity | electricity]] company is not [[facing | face]] the full costs of what it does, even if it is successful in [[limiting | limit]] [[emissions | emission]].
-[[Indeed | indeed]], [[electricity | electricity]] prices may [[end up | end up V-ing]] [[lower | lower]] than they should be and [[electricity | electricity]] [[consumption | consumption]] higher, which will [[worsen | worsen]] [[global warming | global warming]], even though the [[emissions | emission]] per [[unit | unit]] of [[electricity | electricity]] have been reduced.
+A study by Eva McMahan, professor of speech communication, [[confirmed | confirm]] the [[dominance | dominance]] of [[nonverbal | nonverbal]] signals.
+The [[phenomenon | phenomenon]], however, was especially [[pronounced | pronounced]] when adults found themselves in situations with conflicting messages ([[i.e. | i.e.]], situations in which the contents of the [[verbal | verbal]] and [[nonverbal | nonverbal]] messages [[differ | differ]]).
+[[Attempts | attempt]] to [[manipulate | manipulate]] another person [[verbally | verbally]] are therefore likely to fail if the [[accompanying | accompany]] [[nonverbal | nonverbal]] communication does not [[match | match]] the [[spoken | spoken]] message.
+This is because people [[trust | trust]] [[nonverbal | nonverbal]] messages more than [[verbal | verbal]] ones.
+When somebody tells you that they enjoy spending time with you, but you [[notice | notice]] how they are [[looking away | look away]] and are [[forcing a smile | force a smile]], you are probably less [[inclined to | inclined toR]] believe their words.
+The same is probably true when you are back at the office after a sickness and your [[colleague | colleague]] tells you with a [[displeased | displeased]] [[expression | expression]] that they were happy to [[take over | take over]] your [[workload | workload]].
+You might not believe that they enjoyed [[replacing | replace]] you while you were gone.
 
 === 31번 ===
-Few [[people | people]] may [[view | view]] the Star Trek [[universe | universe]] through an [[economic | economic]] [[lens | lens]], but doing so [[provides | provide]] a window into a world that might soon be [[upon | upon ~]] us.
-All of [[classical economics | classical economics]] is [[based on | based on ~]] the [[notion | notion]] that there isn't usually enough of anything to give everyone everything they want or need.
-Because of that, we use markets and [[pricing | pricing]] to [[allocate | allocate]] those [[goods | good]], services, and [[resources | resource]] to where they might [[result in | result in ~]] the highest [[benefit | benefit]].
-In Star Trek, however, there isn't much [[scarcity | scarcity]].
-[[Technology | technology]] has allowed that society to [[reproduce | reproduce]] any food they want, [[transport | transport]] themselves thousands of miles [[in the blink of an eye | in the blink of an eye]], [[communicate | communicate]] over [[light-years | light-year]], and travel among the stars.
-All of [[humanity | humanity]] in that world has been [[fully | fully]] educated so that they can [[participate in | participate in ~]] this [[prosperity | prosperity]].
-Everyone is an [[explorer | explorer]], [[researcher | researcher]], [[engineer | engineer]], artist, doctor, or [[counselor | counselor]].
-[[Generative | generative]] AI has the [[potential | potential]] to [[allow | allow]] many [[dimensions | dimension]] of our own society to be similarly highly [[abundant | abundant]].
+A person who lives eighty years lives some twentynine thousand days, and the [[overwhelming | overwhelming]] [[majority | majority]] of the [[behaviour | behavior / behaviour]] packed into them runs on settings [[laid down | lay down]], most of them, [[decades | decade]] earlier and rarely [[inspected | inspect]] since.
+This need not be a [[hopeless | hopeless]] thought.
+[[In one light | in one light]] it is a [[triumph | triumph]] of [[engineering | engineering]].
+If you had to [[consciously | consciously]] decide every footstep and every forkgrip and every word, you would never make it out of bed; the [[deliberate | deliberate]] mind is far too slow and too [[costly | costly]] to run a [[whole | whole]] [[life | life]] [[in real time | in real time]], and any [[creature | creature]] that tried would be [[outcompeted | outcompete]] by a [[creature | creature]] that didn't.
+The [[automation | automation]] is [[precisely | precisely]] what [[frees | free]] the [[captain | captain]] to [[come up | come up]] on [[deck | deck]] for the few problems that actually require him.
+The [[default | default]] is not a [[flaw | flaw]] in the human design.
+It is [[arguably | arguably]] the central feature, the thing that makes a [[complex | complex]] [[life | life]] [[affordable | affordable]] at all.
 
 === 32번 ===
-[[People | people]], [[whether | whether ~ or otherwise]] customers [[or otherwise | whether ~ or otherwise]], want to [[feel heard | feel heard]].
-When someone calls [[customer service | customer service]], asks to speak to a manager, or comes into your office [[with something on their mind | with something on one's mind]], they want to feel like someone is listening to their [[concerns | concern]] and going to [[address | address]] them.
-But for someone to [[feel heard | feel heard]], three things have to [[happen | happen]].
-First, they have to feel like the other person [[paid attention to | pay attention to ~]] what they said.
-Second, they have to feel like the other person understood what they said.
-And third, the other person has to [[demonstrate | demonstrate]] that they listened.
-This last part is [[key | key]].
-[[Imagine | imagine]] talking to someone who [[provided | provide]] no [[response | response]].
-They might have [[attended to | attend to ~]] everything we said.
-They might even have understood it [[completely | completely]].
-But without [[some sort of | some sort of]] [[outward | outward]] [[signal | signal]] that [[indicates | indicate]] they listened, it's [[impossible | impossible]] to know [[whether or not | whether or not ~]] they actually did.
+If we understand mass culture as a weakening factor of the cultural [[ties | tie]] that [[unite | unite A to B]] people [[to | unite A to B]] their traditions, mass culture [[weakens | weaken]] the [[intermediary | intermediary]] [[institutions | institution]] in [[society | society]] (e.g. the family or the school), diminishing their role and [[overlapping | overlap]] these [[institutions | institution]].
+For example, courts are traditional social [[institutions | institution]] and important for the normal and [[harmonious | harmonious]] [[functioning | functioning]] of [[collective | collective]] [[life | life]].
+However, when people turn to social networks to [[put pressure on | put pressure on ~]] [[judicial | judicial]] decisions in [[certain | certain]] mediated and [[politicized | politicize]] processes, this [[practice | practice]] is [[popularized | popularize]] and becomes a [[habitual | habitual]] form of culture, which is [[harmful | harmful]].
+Justice must not be done in the [[public square | public square]], which today is [[converted into | convert A into B]] a [[virtual | virtual]] [[dimension | dimension]], the social networks.
+In a [[democratic | democratic]] [[state of law | state of law]], the [[appropriate | appropriate]] place to [[judge | judge]] and make [[justice | justice]] is the [[court | court]] and in a way that is immune to popular [[pressure | pressure]].
 
 === 33번 ===
-[[The very | the very ~]] fact that all of our experiences "[[take place | take place]]" in a [[physical | physical]] space makes the space [[inseparable | inseparable]] from what [[defines | define]] it, from the event that [[took place | take place]] in it.
-The tree and the ground [[beneath | beneath]] are [[inseparable | inseparable]] from what [[took place | take place]] there.
-This [[intertwining | intertwine]] of space, place, and [[experience | experience]] [[challenges | challenge]] the idea of place as [[passive | passive]] [[backdrop | backdrop]].
-If place and space are [[central | central]] to the very [[heart | heart]] of [[experience | experience]], we must [[accept | accept]] the [[possibility | possibility]] that the [[spatial framework | spatial framework]] is the [[medium | medium / media]] of all experiences ─ actions, [[thoughts | thought]], memories, and feelings of every place ─ not [[merely | merely]] a background or [[context | context]] [[exterior | exterior]] to [[experience | experience]] (as [[commonly | commonly]] [[supposed | suppose]]).
-Belgian [[literary | literary]] [[critic | critic]] Georges Poulet [[made the point | make the point]] [[elegantly | elegantly]], writing of the space created in Marcel Proust's great novel In Search of Lost Time:
-"Beings [[surround | surround]] themselves with the places where they find themselves, the way one [[wraps | wrap (up)]] oneself [[up | wrap (up)]] in a [[garment | garment]] that is [[at one and the same time | at one and the same time]] a [[disguise | disguise]] and a [[characterization | characterization]].
-Without places, beings would be only [[abstractions | abstraction]]."
+Human [[development | development]] is now [[increasingly | increasingly]] understood as an [[ongoing | ongoing]], [[flexible | flexible]], and [[evolving | evolve]] [[process | process]] [[rather than | rather than ~]] a fixed [[sequence | sequence]] of stages.
+At the [[core | core]] of this [[perspective | perspective]] [[lies | lie (- lay - lain)]] the [[concept | concept]] of [[plasticity | plasticity]].
+[[Plasticity | plasticity]] [[refers to | refer to ~]] the human [[capacity | capacity]] to change, [[adapt | adapt]], and [[reorganize | reorganize]] [[cognitive | cognitive]], [[emotional | emotional]], and [[behavioural | behavioural]] [[patterns | pattern]] [[in response to | in response to ~]] [[life | life]] experiences, environmental [[demands | demand]], and [[biological | biological]] changes.
+It [[highlights | highlight]] that [[individuals | individual]] are not [[merely | merely]] [[passive | passive]] [[recipients | recipient]] of [[development | development]] but active [[agents | agent]] [[capable of | capable]] [[growth | growth]] throughout their lives.
+In earlier views, [[development | development]] was believed to [[occur | occur]] mainly during childhood, with [[adulthood | adulthood]] seen as a period of [[stability | stability]] and old age as a [[phase | phase]] of [[decline | decline]].
+The [[concept | concept]] of [[plasticity | plasticity]] challenges this [[rigid | rigid]] [[outlook | outlook]] by emphasizing that [[development | development]] [[continues | continue]] across the [[entire | entire]] [[lifespan | lifespan]].
+Although the [[extent | extent]] of change may [[vary | vary]] at different stages, every [[phase | phase]] of [[life | life]] allows [[room | room]] for [[adaptation | adaptation]] and [[transformation | transformation]].
 
 === 34번 ===
-[[No matter how | no matter how ~]] you choose to [[delineate | delineate]] your [[evolutionary | evolutionary]] system [[of interest | of interest]] ─ let's say it's cell phones ─ there will be some things that your model just needs to [[take as a given | take ~ as a given]], [[such as | such as]] the fact that new ideas [[emerge | emerge]] at [[particular | particular]] times.
-[[Indeed | indeed]], all models must make [[simplifying | simplify]] [[assumptions | assumption]] of this [[nature | nature]].
-When Wallace and Darwin [[presented | present]] their [[verbal | verbal]] model of [[biological | biological]] [[evolution | evolution]], there was little knowledge of how [[variation | variation]] [[generation | generation]] and [[inheritance | inheritance]] [[worked | work]].
-They just [[took as a given | take ~ as a given]] that these things happened [[somehow | somehow]].
-Even at the finest level of [[detail | detail]], we need [[simplifying | simplify]] [[assumptions | assumption]].
-[[Physicists | physicist]], for example, must [[take as a given | take ~ as a given]] the [[mass | mass]] and [[charge | charge]] of [[fundamental | fundamental]] [[particles | particle]].
-In a model of [[atomic | atomic]] [[bonds | bond]], [[physicists | physicist]] don't [[attempt | attempt]] to [[explain | explain]] why [[electrons | electron]] have their [[particular | particular]] [[mass | mass]] and [[charge | charge]], they just [[accept | accept]] the measured values and [[move on | move on]].
-The [[key | key]] point is that we can build useful models at one level of [[analysis | analysis]] without a [[complete | complete]] [[accounting | accounting]] of what's happening at all other levels.
+Social media has [[altered | alter]] business, [[politics | politics]], and friendships, making [[going viral | go viral]] a [[household term | household term]].
+The global financial industry links every bank and [[countless | countless]] [[households | household]] in every country, making us [[vulnerable | vulnerable]] to human error [[taking place | take place]] on the other side of the world.
+As Columbia University [[strategy | strategy]] professor Rita McGrath explains, years ago most of our [[institutions | institution]] were [[separate | separate]] and [[thereby | thereby]] [[buffered | buffer]] from the [[effects | effect]] of errors outside their walls.
+That is [[no longer | no longer]] the case.
+The [[digitization | digitization]] of [[massive | massive]] amounts of information has continued to [[grow | growth]] [[enormously | enormously]] as the cost of computing power has [[decreased | decrease]].
+The [[development | development]] of smart systems that communicate [[autonomously | autonomously]] [[gave rise to | give rise to ~]] an [[infinite | infinite]] variety of [[potential | potential]] [[breakdowns | breakdown]].
+This [[interdependence | interdependence]] is a [[breeding ground | breeding ground]] for [[complex | complex]] failure.
+As Rita puts it, when "things that [[used to | used toR]] be kept [[separate | separate]] [[bump up against | bump]] each other, it becomes far more difficult to predict what's going to happen next."
+Information technology creates new [[vulnerabilities | vulnerability]] because [[interconnectedness | interconnectedness]] [[instantly | instantly]] [[spreads | spread]] the [[impact | impact]] of small failures.
 
 === 35번 ===
-The [[recognition | recognition]] of [[burnout | burnout]] as an [[occupational | occupational]] [[phenomenon | phenomenon / phenomena]] by the WHO in 2019 [[marked | mark]] an important [[moment | moment]] in the [[discourse | discourse]] on [[workplace | workplace]] mental health.
-This [[designation | designation]] [[reframes | reframe]] [[clinical | clinical]] [[assessment | assessment]] and [[organizational | organizational]] [[responsibility | responsibility]], shifting [[attention | attention]] to [[systemic | systemic]] [[prevention | prevention]].
-It [[invites | invite]] [[employers | employer]] to [[adopt | adopt]] [[structural | structural]] [[interventions | intervention]] rather than [[relying | rely on ~]] [[solely | solely]] [[on | rely on ~]] individual-level [[remedies | remedy]].
-[[In practice | in practice]], this means [[clinicians | clinician]] should [[collaborate | collaborate]] with [[occupational | occupational]] health and [[leadership | leadership]] to [[address | address]] [[root causes | root cause]].
-It signaled a [[shift | shift]] [[away from | away from ~]] viewing [[burnout | burnout]] as a [[personal failing | personal failing]] or a matter of [[individual | individual]] [[resilience | resilience]], toward understanding it as a [[structural | structural]] [[issue | issue]] [[rooted | rooted (in ~)]] in [[organizational | organizational]] culture, [[leadership | leadership]] practices, and the [[broader | broader]] [[socio-economic | socio-economic]] [[context | context]] of work.
-This reframing is [[essential | essential]], as it opens the door to [[systemic | systemic]] [[interventions | intervention]] and [[policy-level | policy-level]] changes rather than placing the [[burden | burden]] [[solely | solely]] on individuals to [[cope | cope with ~]] or [[adapt | adapt]].
+Scientific developments and technologies in medical [[practice | practice]] have brought us [[enormous | enormous]] [[progress | progress]] in the [[treatment | treatment]] and [[prevention | prevention]] of [[infectious | infectious]] diseases.
+The [[discovery | discovery]] of penicillin in 1928 by Alexander Fleming, for which he later [[received | receive]] the Nobel Prize, was one of the biggest [[breakthroughs | breakthrough]] in the [[battle | battle]] against [[infectious | infectious]] diseases.
+Edward Jenner [[discovered | discover]] around 1796 that humans were protected against the [[deadly | deadly]] [[smallpox | smallpox]] virus after [[exposure | exposure]] to the cowpox virus, which is [[harmless | harmless]] to humans.
+[[Vaccines | vaccine]] developed in laboratories have [[contributed | contribute]] [[enormously | enormously]] to the [[reduction | reduction]] of the [[burden | burden]] of [[bacterial | bacterial]] and [[viral | viral]] diseases and have even [[led to | lead to ~]] the [[elimination | elimination]] of poxvirus.
+For other [[infectious | infectious]] diseases (for example [[cholera | cholera]] and malaria), [[control | control]] and [[hygiene | hygiene]] [[management | management]] [[measures | measure]] have [[reduced | reduce]] their [[burden | burden]], while for others [[treatment | treatment]] [[therapies | therapy]] turned [[viral | viral]] diseases that were [[deadly | deadly]] into [[chronic | chronic]] manageable diseases.
 
 
-[passage_mogo_h1_26.10_3: 모고 지문 3 (36~41)]
-# 지문을 보며 단어의 뜻을 맞혀보자.
+[passage_mg_h2_26.10_3: 모고 지문 3 (36~41)]
+# 지문을 읽으며 그 속의 단어 뜻을 살펴보자.
 === 36번 ===
-All sound begins with some kind of [[motion | motion]], something that [[disturbs | disturb]] [[molecules | molecule]] in air, water, steel, wood, or other [[medium | medium / media]].
-Isaac Newton noted that light waves are [[colorless | colorless]]; the [[perception | perception]] of color only [[occurs | occur]] in the brain of a living [[organism | organism]].
-[[The same is true of | the same is true of ~]] sound.
-Thus [[perception | perception]] of sound begins at our [[eardrums | eardrum]] ─ before it [[hits | hit]] our [[eardrums | eardrum]], it is [[nothing more than | nothing more than ~]] the [[disturbance | disturbance]] of [[molecules | molecule]].
-We can [[measure | measure]] that [[disturbance | disturbance]] with [[gauges | gauge]] and [[instruments | instrument]], but until it [[hits | hit]] a brain, it is not sound.
-You may have heard the old [[philosophical | philosophical]] [[riddle | riddle]], "If a tree falls in the forest and no one is there to hear it, does it make it sound?"
-No, because sound is a [[psychological | psychological]] [[concept | concept]], a [[product | product]] of brains.
-That tree will [[disturb | disturb]] [[molecules | molecule]] and [[make a mess | make a mess]], but if no [[creature | creature]] hears it, no bird, fox, or human, it has not made sound.
+A simple truth that designers must [[embrace | embrace]] [[in order to | in order toR]] create more [[effective | effective]] products and experiences is the fact that we are not the user.
+We're much too close to what we build to [[objectively | objectively]] see it and understand how users will [[interact | interact]] with it.
+The best user [[interfaces | interface]] are those that have been shaped by [[observations | observation]] of real users and their [[interactions | interaction]] with them.
+So how can designers [[shape | shape]] their work to be more [[effective | effective]]?
+An [[incredibly | incredibly]] [[effective | effective]] way is with [[usability | usability]] testing.
+The goal of this [[method | method]] is to [[uncover | uncover]] problems in a design, [[discover | discover]] [[existing | existing]] [[opportunities | opportunity]], and learn more about the [[behaviors | behavior / behaviour]] and [[preferences | preference]] of users by asking participants to [[engage in | engage in ~]] [[realistic | realistic]] activities.
+This [[technique | technique]] is [[effective | effective]] for understanding how well a design will [[perform | perform]] once it is in the hands of real users.
+Designers can use this [[method | method]] to [[improve | improve]] their work through [[subsequent | subsequent]] [[revisions | revision]] [[based on | base on]] the [[findings | finding]] from [[representative | representative]] users.
 
 === 37번 ===
-When [[people | people]] are collaborating [[face to face | face to face]] they can easily see each other and the [[range | range]] of different [[communication | communication]] [[cues | cue]] being used, so the [[task | task]] space is a [[subset | subset]] of the [[communication | communication]] space.
-Ishii, a [[professor | professor]] at the MIT Media Lab, [[describes | describe (~ as ...)]] this [[as | describe (~ as ...)]] [[seamless | seamless]] [[communication | communication]] because there is no [[functional | functional]] [[separation | separation]] between the [[task | task]] and [[communication | communication]] space.
-However, when [[people | people]] are working [[remotely | remotely]], the [[task | task]] space is often [[separated | separate]] from the [[communication | communication]] space.
-For example, when video [[conferencing | conferencing]], [[people | people]] may have the [[face | face]] of their [[collaborator | collaborator]] on one [[screen | screen]], while looking at a shared [[document | document]] on another.
-In this case, it is [[impossible | impossible]] to see many of the [[remote | remote]] [[collaborator's | collaborator]] [[communication | communication]] [[cues | cue]] [[at the same time | at the same time]] as looking at the [[task | task]] space.
-So, there is an [[artificial | artificial]] [[seam | seam]] between the [[communication | communication]] space and [[task | task]] space.
-This is the type of [[impact | impact]] of [[remote | remote]] [[communication | communication]] [[technology | technology]] that needs to be [[predicted | predict]] through [[communication | communication]] models.
+[[Reappraisal | reappraisal]] ― changing the way one thinks about [[emotional | emotional]] situations ― might [[present | present]] a [[particularly | particularly]] [[effective | effective]] [[avenue | avenue]] to [[regulating | regulate]] emotions because it transforms emotions [[at their root | at one's root]].
+[[Take | take ~ for example]], for example, someone who is [[going through | go through ~]] a [[divorce | divorce]].
+This is often an [[adverse | adverse]] event, [[and yet | and yet]], it can be [[construed | construe]] in different ways.
+One might [[view | view A as B]] it [[as | view A as B]] an [[overpowering | overpower]] [[loss | loss]] that will [[mark | mark]] one's family for [[life | life]].
+[[Alternatively | alternatively]], one might see it as something that is [[painful | painful]] but that might [[lead to | lead to ~]] positive outcomes [[in the long run | in the long run]], such as improved relationships.
+[[As a result of | as a result of ~]] these different [[construals | construal]], one might feel different emotions.
+The first [[construal | construal]] may bring [[intense | intense]] [[sadness | sadness]] and [[anger | anger]].
+The second [[construal | construal]] might also bring [[sadness | sadness]] and [[anger | anger]] but perhaps at lower levels.
+[[Crucially | crucially]], it might also bring some positive emotions, such as hope, [[strength | strength]], or [[gratitude | gratitude]].
+This example [[illustrates | illustrate]] how [[reappraisal | reappraisal]] might powerfully [[transform | transform]] [[short-term | short-term]] [[emotional | emotional]] [[responses | response]].
+When repeated over time, these [[short-term | short-term]] [[emotional | emotional]] [[consequences | consequence]] of [[reappraisal | reappraisal]] might [[accumulate | accumulate]] to [[shape | shape]] people's [[psychological | psychological]] health.
+[[Thereby | thereby]], [[reappraisal | reappraisal]] might be a key to [[resilience | resilience]].
 
 === 38번 ===
-In 1977, [[psychologists | psychologist]] Lynn Hasher and David Goldstein asked a group of college students how [[certain | certain]] they were that sixty [[general | general]]-knowledge [[trivia | trivia]]-like [[statements | statement]] were either [[true | truth]] or [[false | false]].
-The students were asked to [[evaluate | evaluate]] the sixty [[statements | statement]] three times, at two-week [[intervals | interval]].
-[[Crucially | crucially]], only twenty of the [[statements | statement]] were [[repeated | repeat]] each time; the other forty were new.
-The researchers then [[compared | compare]] the '[[truth | truth]]-[[ratings | rating]]' of the [[repeated | repeat]] [[versus | versus]] non-[[repeated | repeat]] [[statements | statement]].
-What they found was [[astonishing | astonishing]].
-[[Regardless of | regardless of ~]] whether the [[statement | statement]] was [[true | truth]] or [[false | false]], [[belief | belief]] in the [[truth | truth]] of the [[claim | claim]] went up [[as a function of | as a function of ~]] [[repetition | repetition]].
-[[In other words | in other words]], the more often you hear a [[statement | statement]], the more '[[true | truth]]' it sounds.
-This became [[known as | known as ~]] the [[illusory | illusory]] [[truth | truth]] [[effect | effect]].
+When we say that water is "clean," we don't just mean that it looks like a glass of water.
+Water [[quality | quality]] is about following a [[certain | certain]] [[set of | a set of ~]] [[criteria | criterion / criteria]], or "[[benchmarks | benchmark]]."
+These [[guidelines | guideline]] inform us exactly how much [[physical | physical]], [[chemical | chemical]], or [[biological | biological]] stuff can be in the water.
+These rules [[ensure | ensure]] the water is safe for anything we want to do with it, whether that's drinking it at home, watering [[crops | crop]] on a farm, or running it through a huge [[industrial | industrial]] [[boiler | boiler]].
+We can't [[utilize | utilize]] the same "[[one size fits all | one size fits all]]" rule for everyone because we use water for so many [[diverse | diverse]] things.
+For instance, the water that [[cools down | cool down]] a huge [[power plant | power plant]] [[generator | generator]] doesn't need to be as clean as the water you drink from the kitchen [[tap | tap]].
+This is why groups set different "safety limits" for the water [[dependent | dependent]] on how it will be [[utilized | utilize]].
 
 === 39번 ===
-The human body on the Earth's [[surface | surface]] experiences [[constant | constant]] air [[pressure | pressure]] [[equal | equal]] to 16-18 tons per [[square meter | square meter]] of its body [[surface | surface]].
-However, this [[pressure | pressure]] is not felt because [[external | external]] [[pressure | pressure]] is [[balanced | balance]] by [[internal | internal]] [[pressure | pressure]] in the [[lungs | lung]] and [[air cavities | air cavity]] of the body.
-During [[dives | dive]], [[in addition to | in addition to ~]] [[atmospheric pressure | atmospheric pressure]], the [[pressure | pressure]] of the water also [[acts on | act on ~]] the human body.
-When [[submerged | submerge]] underwater, to [[avoid | avoid]] feeling the [[pressure | pressure]] of the [[surrounding | surrounding]] [[environment | environment]], it is [[necessary | necessary]] to [[maintain | maintain]] the [[condition | condition]] of [[equal | equal]] [[external | external]] and [[internal | internal]] [[pressure | pressure]].
-To [[achieve | achieve]] this, air or a [[breathing mixture | breathing mixture]] is supplied to the [[diver | diver]] under [[pressure | pressure]] [[equal | equal]] to the [[pressure | pressure]] [[applied | apply]] by the [[surrounding | surrounding]] water.
-Water [[pressure | pressure]] increases [[proportionally | proportionally]] with [[depth | depth]].
-It increases by 1 bar for every 10 meters.
-[[It follows that | it follows that ~]] a [[diver | diver]] at a [[depth | depth]] of 10 meters experiences a [[pressure | pressure]] of 2 bar, and to [[stabilize | stabilize]] [[pressure | pressure]], the supply of a [[breathing mixture | breathing mixture]] under a [[pressure | pressure]] of 2 [[atmospheres | atmosphere]] is [[required | require]].
+Like all historians, social historians [[draw | draw]] from [[a variety of | a variety of ~]] [[primary sources | primary source]].
+Social history often emphasizes [[ordinary | ordinary]] people [[rather than | rather than ~]] elites.
+Yet, in most places and times, nonelites [[lacked | lack]] [[access | access]] to education and, thus, did not [[produce | produce]] [[substantial | substantial]] amounts of [[documentation | documentation]].
+Even when they did [[produce | produce]] [[documentation | documentation]], these [[materials | material]] rarely [[ended up | end up V-ing]] in [[archives | archive]] where they could be [[preserved | preserve]] and made [[available | available]] to [[researchers | researcher]].
+Because of such [[biases | bias]] in the [[historical | historical]] [[record | record]], social historians have to be very [[creative | creative]] in their work.
+Like other historians, social historians [[analyze | analyze]] [[textual | textual]] [[sources | source]] produced by government [[officials | official]], employers, and other elites.
+Yet [[rather than | rather than ~]] simply take such [[sources | source]] [[at face value | at face value]], they read them "[[against the grain | against the grain]]".
+So, for example, a social historian will read [[legal | legal]] [[documents | document]] not only for the "facts" provided by slaveowners; she will also [[examine | examine]] the silences, interruptions, rumors, and other [[details | detail]] that [[offer | offer]] hints about the enslaved peoples' [[attitudes | attitude]] and actions.
 
 === 40번 ===
-Researchers recently found that [[goldenrods | goldenrod]] that live in peaceful areas without much [[threat | threat]] from [[predators | predator]] will [[issue | issue]] [[chemical | chemical]] [[alarm calls | alarm call]] that are [[incredibly | incredibly]] [[specific | specific]] ─ [[comprehensible | comprehensible]] only to their close [[kin | kin]] ─ [[on the rare occasion | on the rare occasion]] they are attacked.
-But [[goldenrods | goldenrod]] in more [[hostile | hostile]] [[territory | territory]] [[signal | signal]] to their [[neighbors | neighbor]] using [[chemical | chemical]] phrases easily understood by all the [[goldenrod | goldenrod]] in the area, not just their [[biological | biological]] [[kin | kin]].
-Instead of using coded [[whisper | whisper]] networks, these [[goldenrod | goldenrod]] [[broadcast | broadcast]] the [[threat | threat]] over [[loudspeaker | loudspeaker]], [[so to speak | so to speak]].
-It is the first time [[research | research]] has confirmed that these [[chemical | chemical]] communications are [[beneficial | beneficial]] not only to the plant receiving them but also to the sender.
-When times are truly [[tough | tough]], you do not want to be left standing in a field alone.
-There will be no one to [[mate | mate]] with, no one to help bring in [[pollinators | pollinator]].
-─> Compared to those in peaceful areas, [[goldenrods | goldenrod]] in more [[hostile | hostile]] environments send more [[broadly | broadly]] understandable [[chemical | chemical]] messages, [[thereby | thereby]] [[benefiting | benefit]] both the senders and the receivers.
+Dolphins' brains have [[evolved | evolve]] [[specialized | specialized]] areas [[dedicated | dedicated]] to [[echolocation | echolocation]], allowing them to [[process | process]] [[acoustic | acoustic]] information more quickly and with less energy.
+One key [[adaptation | adaptation]] is the [[structure | structure]] of the dolphin's [[auditory | auditory]] [[pathway | pathway]].
+The signals from the ears are [[rapidly | rapidly]] [[transmitted | transmit]] to the [[auditory | auditory]] [[cortex | cortex]], the brain region [[responsible for | responsible for ~]] processing sound.
+However, unlike many other [[mammals | mammal]], dolphins have a highly [[specialized | specialized]] [[auditory | auditory]] [[cortex | cortex]] with [[distinct | distinct]] areas [[dedicated | dedicated]] to processing different [[aspects | aspect]] of [[echolocation | echolocation]] signals.
+Some areas may be [[responsible for | responsible for ~]] analyzing the [[timing | timing]] of echoes, while others [[focus on | focus on ~]] the [[frequency | frequency]] [[content | content]] or the [[intensity | intensity]] of the sound.
+This [[specialization | specialization]] allows the dolphin's brain to [[process | process]] echo information [[in parallel | in parallel]], [[rather than | rather than ~]] [[sequentially | sequentially]].
+[[Imagine | imagine]] a factory [[assembly line | assembly line]], where different workers are [[responsible for | responsible for ~]] different tasks.
+By dividing the work among [[specialized | specialized]] areas, the brain can [[process | process]] information much faster and more [[efficiently | efficiently]].
+This [[parallel | parallel]] processing reduces the [[cognitive load | cognitive load]] [[associated with | associate A with B]] [[echolocation | echolocation]], allowing dolphins to [[react | react]] quickly to changes in their [[environment | environment]].
 
 === 41~42번 ===
-[[Patterns | pattern]] [[such as | such as]] [[infinite | infinite]] scroll, [[autoplaying | autoplay]] videos, or requiring an account just to make a [[purchase | purchase]] all [[interfere with | interfere with ~]] the user's control over their own [[experience | experience]].
-From a [[sustainability | sustainability]] [[perspective | perspective]], many of these [[patterns | pattern]] [[encourage | encourage]] [[overconsumption | overconsumption]] of data and [[attention | attention]].
-[[Infinite | infinite]] scroll [[keeps | keep V-ing]] [[loading | load]] new [[content | content]] whether the user wants it or not, increasing data [[usage | usage]] and device [[processing | processing]].
-[[Autoplay | autoplay]] [[forces | force (~ toR)]] media to [[load | load]] and play even for [[people | people]] who may never watch it.
-These choices [[consume | consume]] more energy on both the user's device and the servers [[delivering | deliver]] the [[content | content]].
-Take the [[decision | decision]] by a popular music streaming platform to [[replace | replace]] [[static | static]] album [[artwork | artwork]] with short video loops [[by default | by default]].
-This change [[significantly | significantly]] increases data [[usage | usage]] and battery [[consumption | consumption]], while the option to [[disable | disable]] it is [[buried | bury]] deep in the settings.
-[[As a result | as a result]], most users [[consume | consume]] more [[resources | resource]] unless they actively [[search | search ~ for ...]] for a way to [[opt out | opt out]].
-It is important to [[acknowledge | acknowledge]] that web design always [[nudges | nudge]] [[behavior | behavior / behaviour]] in some way.
-Showing [[consequences | consequence]] and [[highlighting | highlight]] options are all forms of [[influence | influence]].
-The [[ethical | ethical]] line is not whether nudging exists, but whether it is [[transparent | transparent]], [[reversible | reversible]], and [[aligned with | aligned with ~]] the user's interests.
-In many cases, the most [[responsible | responsible]] [[approach | approach]] is to make the lower‐impact option the [[default | default]], while keeping alternatives clearly available.
-Defaults are [[powerful | powerful]], and when chosen [[carefully | carefully]], they can [[reduce | reduce]] [[environmental | environmental]] [[impact | impact]] without [[removing | remove]] user [[agency | agency]].
+It is [[crucial | crucial]] to [[recognize | recognize]] that [[boredom | boredom]] can [[give rise to | give rise to ~]] [[harmful | harmful]] emotions such as [[depression | depression]], [[despair | despair]], and [[irritation | irritation]] if not [[adequately | adequately]] addressed.
+When we believe that the only way to be happy is by searching for fun activities, then we become [[dependent | dependent]] on those activities, and negative thoughts and emotions [[arise | arise]].
+It is suggested that '[[Idle | idle]] time is the devil's [[workshop | workshop]]' implies that those with too much time on their hands may fill that time with [[troubling | troubling]] thoughts and [[behavior | behavior / behaviour]].
+The [[balance | balance]] is to not see it as [[idle | idle]] time, wasted time, or [[boredom | boredom]] but rather as a perfect time for [[self-improvement | self-improvement]], self-identification, and positive [[reflection | reflection]] time.
+[[Reflecting | reflect]], just how lucky are we to be bored?
+[[Boredom | boredom]] doesn't [[exist | exist]] [[in the presence of | in the presence of ~]] danger, as it is only an [[indulgence | indulgence]] [[pastime | pastime]] in a safe zone.
+[[Boredom | boredom]] can be [[perceived | perceive]] as a [[luxury | luxury]] that typically [[manifests | manifest]] in safe and [[inactive | inactive]] situations, providing an [[occasion | occasion]] to [[appreciate | appreciate]] and [[comprehend | comprehend]] the [[environment | environment]].
+In [[hazardous | hazardous]] circumstances, the [[luxury | luxury]] of [[boredom | boredom]] is [[unavailable | unavailable]].
+Thus, it is [[paramount | paramount]] to [[utilize | utilize]] [[idle | idle]] moments for [[profound | profound]] self-reflection.
+It represents an [[occasion | occasion]] to listen, [[observe | observe]], and [[appreciate | appreciate]] before expressing.
+[[Rather than | rather than ~]] viewing [[boredom | boredom]] as [[unproductive | unproductive]], it should be [[regarded | regard]] as an [[opportunity | opportunity]] for personal [[development | development]] and [[constructive | constructive]] [[contemplation | contemplation]].
+
 
 `;
